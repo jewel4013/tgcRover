@@ -9,13 +9,13 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-        
+
         <!-- Title -->
         <title>Tongi Govt Gollege Rover & Girl in Rover Unit</title>
-		
+
 		<!-- Favicon -->
         <link rel="icon" href="{{ asset('img/rover_logo.png') }}">
-			
+
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 		<!-- Nice Select CSS -->
@@ -34,15 +34,15 @@
         <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
 		<!-- Magnific Popup CSS -->
         <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-		
+
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-        
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/tailwindcss.css') }}">
-        
+
     </head>
     <body>
         <div class="">
@@ -58,15 +58,15 @@
                         @endif
                     @endauth
                 </div>
-            @endif --}}            
-                
-            @include('partials.loader')            
+            @endif --}}
+
+            @include('partials.loader')
             @include('partials.notice')
-        
+
             @include('partials.header')
-            
+
             @include('partials.slider')
-            
+
             <!-- Start Schedule Area -->
             <section class="schedule">
                 <div class="container">
@@ -136,9 +136,12 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title">
-                                <h2>We Are Always Ready to Help You & Your Family</h2>
-                                <img src="img/section-img.png" alt="#">
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+                                <h2>We Are Always Ready to Help You</h2>
+                                {{-- <img src="img/section-img.png" alt="#"> --}}
+                                <p>
+                                    সকল স্কাউটদের মূলমন্ত্র হলো “সদা প্রস্তুত”। মটো শব্দের অর্থ হলো সংক্ষিপ্ত নীতি বাক্য বা মূলমন্ত্র। স্কাউট মূলমন্ত্র হচ্ছে “সদা প্রস্তুত থাকা” যাকে ইংরেজিতে “Be Prepared” বলা হয়।
+                                    যার অর্থ হচ্ছে মানসিক ও শারীরিকভাবে দায়িত্ব পালনের জন্য সবসময় প্রস্তুত থাকা।
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -180,7 +183,7 @@
                 </div>
             </section>
             <!--/ End Feautes -->
-            
+
             <!-- Start Fun-facts -->
             <div id="fun-facts" class="fun-facts section overlay">
                 <div class="container">
@@ -233,7 +236,7 @@
                 </div>
             </div>
             <!--/ End Fun-facts -->
-            
+
             <!-- Start Why choose -->
             <section class="why-choose section" >
                 <div class="container">
@@ -294,7 +297,7 @@
                 </div>
             </section>
             <!--/ End Why choose -->
-            
+
             <!-- Start Call to action -->
             <section class="call-action overlay" data-stellar-background-ratio="0.5">
                 <div class="container">
@@ -313,7 +316,7 @@
                 </div>
             </section>
             <!--/ End Call to action -->
-            
+
             <!-- Start portfolio -->
             <section class="portfolio section" >
                 <div class="container">
@@ -369,7 +372,7 @@
                 </div>
             </section>
             <!--/ End portfolio -->
-            
+
             <!-- Start service -->
             <section class="services section">
                 <div class="container">
@@ -388,7 +391,7 @@
                             <div class="single-service">
                                 <i class="icofont icofont-prescription"></i>
                                 <h4><a href="service-details.html">General Treatment</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
                             </div>
                             <!-- End Single Service -->
                         </div>
@@ -397,7 +400,7 @@
                             <div class="single-service">
                                 <i class="icofont icofont-tooth"></i>
                                 <h4><a href="service-details.html">Teeth Whitening</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
                             </div>
                             <!-- End Single Service -->
                         </div>
@@ -406,7 +409,7 @@
                             <div class="single-service">
                                 <i class="icofont icofont-heart-alt"></i>
                                 <h4><a href="service-details.html">Heart Surgery</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
                             </div>
                             <!-- End Single Service -->
                         </div>
@@ -415,7 +418,7 @@
                             <div class="single-service">
                                 <i class="icofont icofont-listening"></i>
                                 <h4><a href="service-details.html">Ear Treatment</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
                             </div>
                             <!-- End Single Service -->
                         </div>
@@ -424,7 +427,7 @@
                             <div class="single-service">
                                 <i class="icofont icofont-eye-alt"></i>
                                 <h4><a href="service-details.html">Vision Problems</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
                             </div>
                             <!-- End Single Service -->
                         </div>
@@ -433,7 +436,7 @@
                             <div class="single-service">
                                 <i class="icofont icofont-blood"></i>
                                 <h4><a href="service-details.html">Blood Transfusion</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
                             </div>
                             <!-- End Single Service -->
                         </div>
@@ -441,7 +444,7 @@
                 </div>
             </section>
             <!--/ End service -->
-            
+
             <!-- Pricing Table -->
             <section class="pricing-table section">
                 <div class="container">
@@ -466,7 +469,7 @@
                                     <h4 class="title">Plastic Suggery</h4>
                                     <div class="price">
                                         <p class="amount">$199<span>/ Per Visit</span></p>
-                                    </div>	
+                                    </div>
                                 </div>
                                 <!-- Table List -->
                                 <ul class="table-list">
@@ -494,7 +497,7 @@
                                     <h4 class="title">Teeth Whitening</h4>
                                     <div class="price">
                                         <p class="amount">$299<span>/ Per Visit</span></p>
-                                    </div>	
+                                    </div>
                                 </div>
                                 <!-- Table List -->
                                 <ul class="table-list">
@@ -522,7 +525,7 @@
                                     <h4 class="title">Heart Suggery</h4>
                                     <div class="price">
                                         <p class="amount">$399<span>/ Per Visit</span></p>
-                                    </div>	
+                                    </div>
                                 </div>
                                 <!-- Table List -->
                                 <ul class="table-list">
@@ -539,13 +542,13 @@
                             </div>
                         </div>
                         <!-- End Single Table-->
-                    </div>	
-                </div>	
-            </section>	
+                    </div>
+                </div>
+            </section>
             <!--/ End Pricing Table -->
-            
-            
-            
+
+
+
             <!-- Start Blog Area -->
             <section class="blog section" id="blog">
                 <div class="container">
@@ -611,7 +614,7 @@
                 </div>
             </section>
             <!-- End Blog Area -->
-            
+
             <!-- Start clients -->
             <div class="clients overlay">
                 <div class="container">
@@ -651,7 +654,7 @@
                 </div>
             </div>
             <!--/Ens clients -->
-            
+
             <!-- Start Appointment -->
             <section class="appointment">
                 <div class="container">
@@ -742,7 +745,7 @@
                 </div>
             </section>
             <!-- End Appointment -->
-            
+
             <!-- Start Newsletter Area -->
             <section class="newsletter section">
                 <div class="container">
@@ -770,18 +773,18 @@
                 </div>
             </section>
             <!-- /End Newsletter Area -->
-            
 
 
 
-           @include('partials.footer') 
+
+           @include('partials.footer')
         </div>
 
 
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <!-- jquery Min JS -->
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <!-- jquery Migrate JS -->
