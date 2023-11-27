@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use Carbon\Carbon;
+// use App\Rules\imageExtension;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -35,29 +37,40 @@ class RegisteredUserController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'user_name' => ['required', 'string', 'lowercase', 'max:255', 'unique:'.User::class],
-            // 'mobile' => ['required', 'string', 'min:11', 'max:11',],
-            'avatar' => ['required', 'mimes:jpg',],
-            // 'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'mobile' => ['required', 'string', 'min:11', 'max:11',],
+            'avatar' => ['required', 'mimes:jpg,jpeg,png'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'user_type' => [],
             'status' => [],
         ]);
-        $avatar = $request->avatar;
-        dd($avatar);
-        // $user = User::create([
-        //     'first_name' => $request->first_name,
-        //     'last_name' => $request->last_name,
-        //     'email' => $request->email,
-        //     'user_name' => $request->user_name,
-        //     'mobile' => $request->mobile,
-        //     'avatar' => $request->avatar,
-        //     'password' => Hash::make($request->password),
+
+        if(request()->hasFile('avatar')){
+            $avatar = $request->avatar;
+            $ext = $avatar->extension();            
+            $currentTime = Carbon::now()->timestamp;            
+            $avatarName = $currentTime.'_'.uniqid().'.'.$ext;
+            $avatar->move('img', $avatarName);
+
+
+            $user = User::create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'email' => $request->email,
+                'user_name' => $request->user_name,
+                'mobile' => $request->mobile,
+                'avatar' => $avatarName,
+                'password' => Hash::make($request->password),
+                
+            ]);
+    
+            event(new Registered($user));
+    
+            Auth::login($user);
+    
+            return redirect(RouteServiceProvider::HOME);
+
             
-        // ]);
-
-        // event(new Registered($user));
-
-        // Auth::login($user);
-
-        // return redirect(RouteServiceProvider::HOME);
+        }
+        
     }
 }

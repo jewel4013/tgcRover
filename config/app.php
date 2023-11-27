@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Tongi Govt College Rover & Girl in Rover Unit'),
 
     /*
     |--------------------------------------------------------------------------

@@ -6,6 +6,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
@@ -47,10 +48,17 @@ class ProfileController extends Controller
         ]);
 
         $user = $request->user();
+        
+        $fileDestination = 'images/'.Auth::user()->avatar;
+        if(File::exists($fileDestination)){
+            File::delete($fileDestination);
+        }
 
         Auth::logout();
 
         $user->delete();
+        
+        
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
