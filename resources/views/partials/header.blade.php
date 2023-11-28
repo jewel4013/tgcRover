@@ -62,6 +62,7 @@
                                             <li><a href="index.html">Rover Mate</a></li>
                                             <li><a href="index.html">Rover</a></li>
                                             <li><a href="index.html">Rover Squire</a></li>
+                                            <li><a href="index.html">Former Rover</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Services </a></li>

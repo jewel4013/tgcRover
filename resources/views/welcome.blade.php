@@ -62,9 +62,7 @@
 
             @include('partials.loader')
             @include('partials.notice')
-
             @include('partials.header')
-
             @include('partials.slider')
 
             <!-- Start Schedule Area -->
@@ -150,10 +148,10 @@
                             <!-- Start Single features -->
                             <div class="single-features">
                                 <div class="signle-icon">
-                                    <i class="icofont icofont-ambulance-cross"></i>
+                                    <i class="icofont-read-book"></i>
                                 </div>
-                                <h3>Emergency Help</h3>
-                                <p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+                                <h3>Get admission in college</h3>
+                                <p>রোভারিং এ যোগদানের জন্য অবশ্যই আপনাকে অত্র কলেজের শিক্ষার্থী হতে হবে।</p>
                             </div>
                             <!-- End Single features -->
                         </div>
@@ -161,10 +159,10 @@
                             <!-- Start Single features -->
                             <div class="single-features">
                                 <div class="signle-icon">
-                                    <i class="icofont icofont-medical-sign-alt"></i>
+                                    <i class="icofont-ui-user-group"></i>                                    
                                 </div>
-                                <h3>Enriched Pharmecy</h3>
-                                <p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+                                <h3>Join Rover Scout</h3>
+                                <p>রোভারিং এ যোগদানের জন্য অবশ্যই আপনাকে অত্র কলেজের শিক্ষার্থী হতে হবে।</p>
                             </div>
                             <!-- End Single features -->
                         </div>
@@ -172,10 +170,10 @@
                             <!-- Start Single features -->
                             <div class="single-features last">
                                 <div class="signle-icon">
-                                    <i class="icofont icofont-stethoscope"></i>
+                                    <i class="icofont-aids"></i>
                                 </div>
-                                <h3>Medical Treatment</h3>
-                                <p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+                                <h3>Give service</h3>
+                                <p>রোভারিং এ যোগদানের জন্য অবশ্যই আপনাকে অত্র কলেজের শিক্ষার্থী হতে হবে।</p>
                             </div>
                             <!-- End Single features -->
                         </div>
@@ -191,10 +189,10 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Start Single Fun -->
                             <div class="single-fun">
-                                <i class="icofont icofont-home"></i>
+                                <i class="icofont-brand-ubuntu"></i>
                                 <div class="content">
-                                    <span class="counter">3468</span>
-                                    <p>Hospital Rooms</p>
+                                    <span class="counter">4</span>
+                                    <p>Units</p>
                                 </div>
                             </div>
                             <!-- End Single Fun -->
@@ -202,10 +200,10 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Start Single Fun -->
                             <div class="single-fun">
-                                <i class="icofont icofont-user-alt-3"></i>
+                                <i class="icofont-people"></i>
                                 <div class="content">
-                                    <span class="counter">557</span>
-                                    <p>Specialist Doctors</p>
+                                    <span class="counter">2749</span>
+                                    <p>Members</p>
                                 </div>
                             </div>
                             <!-- End Single Fun -->
@@ -213,10 +211,10 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Start Single Fun -->
                             <div class="single-fun">
-                                <i class="icofont-simple-smile"></i>
+                                <i class="icofont-ui-home"></i>
                                 <div class="content">
-                                    <span class="counter">4379</span>
-                                    <p>Happy Patients</p>
+                                    <span class="counter">652</span>
+                                    <p>Events</p>
                                 </div>
                             </div>
                             <!-- End Single Fun -->
@@ -224,14 +222,14 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Start Single Fun -->
                             <div class="single-fun">
-                                <i class="icofont icofont-table"></i>
+                                <i class="icofont-award"></i>
                                 <div class="content">
-                                    <span class="counter">32</span>
-                                    <p>Years of Experience</p>
+                                    <span class="counter">779</span>
+                                    <p>Awards</p>
                                 </div>
                             </div>
                             <!-- End Single Fun -->
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
