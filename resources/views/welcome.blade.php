@@ -74,18 +74,30 @@
                                 <!-- single-schedule -->
                                 <div class="single-schedule first">
                                     <div class="inner">
-                                        <div class="icon">
+                                        {{-- <div class="icon">
                                             <i class="fa fa-ambulance"></i>
+                                        </div> --}}
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <img src="{{ asset('img/author2.jpg') }}" class="rounded-circle" alt="">
+                                            </div>
+                                            <div class="col-7 p-0 d-flex flex-column justify-content-end align-item-start">
+                                                <span>Lorem Amet</span>
+                                                <span>Lorem Amet</span>
+                                            </div>
                                         </div>
-                                        <div class="single-content">
-                                            <span>Lorem Amet</span>
+                                        <div class="single-content">                                            
                                             <h4>Emergency Cases</h4>
-                                            <p>Lorem ipsum sit amet consectetur adipiscing elit. Vivamus et erat in lacus convallis sodales.</p>
+                                            <p class="text-justify">
+                                                শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে।
+                                                শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে ...
+                                            </p>
                                             <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="col-lg-4 col-md-6 col-12">
                                 <!-- single-schedule -->
                                 <div class="single-schedule middle">
@@ -102,6 +114,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-lg-4 col-md-12 col-12">
                                 <!-- single-schedule -->
                                 <div class="single-schedule last">
@@ -544,8 +557,6 @@
                 </div>
             </section>
             <!--/ End Pricing Table -->
-
-
 
             <!-- Start Blog Area -->
             <section class="blog section" id="blog">

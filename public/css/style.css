@@ -743,7 +743,7 @@ body{
 .schedule .single-schedule:hover{
 	transform: translateY(-5px);
 }
-.schedule .single-schedule .icon i{
+/* .schedule .single-schedule .icon i{
 	position: absolute;
 	font-size: 110px;
 	color: #fff;
@@ -757,7 +757,7 @@ body{
 	opacity:0.2;
 	right: -25px;
 	bottom: -30px;
-}
+} */
 .schedule .single-schedule span{
 	display:block;
 	color:#fff;
