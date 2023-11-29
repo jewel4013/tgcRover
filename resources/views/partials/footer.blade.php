@@ -4,22 +4,23 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-footer">
                         <h2>About Us</h2>
-                        <p>Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.</p>
+                        <p>সকল স্কাউটদের মূলমন্ত্র হলো “সদা প্রস্তুত”। মটো শব্দের অর্থ হলো সংক্ষিপ্ত নীতি বাক্য বা মূলমন্ত্র। স্কাউট মূলমন্ত্র হচ্ছে “সদা প্রস্তুত থাকা” যাকে ইংরেজিতে “Be Prepared” বলা হয়।
+                            যার অর্থ হচ্ছে মানসিক ও শারীরিকভাবে দায়িত্ব পালনের জন্য সবসময় প্রস্তুত থাকা।</p>
                         <!-- Social -->
                         <ul class="social">
                             <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                            <li><a href="#"><i class="icofont-youtube"></i></a></li>
+                            {{-- <li><a href="#"><i class="icofont-twitter"></i></a></li>
                             <li><a href="#"><i class="icofont-vimeo"></i></a></li>
-                            <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                            <li><a href="#"><i class="icofont-pinterest"></i></a></li> --}}
                         </ul>
                         <!-- End Social -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-footer f-link">
                         <h2>Quick Links</h2>
                         <div class="row">
@@ -27,24 +28,27 @@
                                 <ul>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Notice</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>	
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Events</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Members</a></li>
+
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Award</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Gallary</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>College Info</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Extracurricular</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>	
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                {{-- <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-footer">
                         <h2>Open Hours</h2>
                         <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
@@ -54,11 +58,11 @@
                             <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                </div> --}}
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-footer">
-                        <h2>Newsletter</h2>
-                        <p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+                        <h2>Subscribe</h2>
+                        <p>আমাদের স্বীকৃতি জানাতে ও আমাদের সকল তথ্য সবার আগে জানতে আপনার ই-মেইল আইডি দিয়ে সাবস্ক্রাইব করে রাকুন।</p>
                         <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
                             <input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'Your email address'" required="" type="email">
@@ -76,7 +80,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="copyright-content">
-                        <p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+                        <p>© Copyright 2023  |  All Rights Reserved by <a href="https://www.tgcrover.com" target="_blank">Tongi Govt College Rover & Girl-in Rover</a> </p>
+                        <p>Develope by <a href="https://www.facebook.com/jewelrana4013" target="_blank">Jewel Rana</a></p>
                     </div>
                 </div>
             </div>

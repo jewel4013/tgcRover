@@ -264,7 +264,7 @@
             </div>
             <!--/ End Fun-facts -->
 
-            <!-- Start Why choose -->
+            {{-- <!-- Start Why choose -->
             <section class="why-choose section" >
                 <div class="container">
                     <div class="row">
@@ -797,7 +797,7 @@
                     </div>
                 </div>
             </section>
-            <!-- /End Newsletter Area -->
+            <!-- /End Newsletter Area --> --}}
 
 
 

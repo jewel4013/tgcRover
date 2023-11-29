@@ -67,15 +67,15 @@
                                     </li>
                                     <li><a href="#">Services </a></li>
                                     <li><a href="#">Awards </a></li>
-                                    <li><a href="#">Gallary </a></li>                                    
+                                    <li><a href="#">Gallary </a></li>
                                     <li><a href="#">More <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">College Info</a></li>
                                             <li><a href="blog-single.html">Extracurricular	</a></li>
-                                            <li><a href="index.html"></a></li>                                            
+
                                         </ul>
                                     </li>
-                                    
+
                                 </ul>
                             </nav>
                         </div>
