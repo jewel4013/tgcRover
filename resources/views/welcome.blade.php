@@ -73,49 +73,65 @@
                             <div class="col-lg-4 col-md-6 col-12 ">
                                 <!-- single-schedule -->
                                 <div class="single-schedule first">
-                                    <div class="inner">
-                                        {{-- <div class="icon">
-                                            <i class="fa fa-ambulance"></i>
-                                        </div> --}}
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <img src="{{ asset('img/author2.jpg') }}" class="rounded-circle" alt="">
-                                            </div>
-                                            <div class="col-7 p-0 d-flex flex-column justify-content-end align-item-start">
-                                                <span>Lorem Amet</span>
-                                                <span>Lorem Amet</span>
-                                            </div>
-                                        </div>
-                                        <div class="single-content">                                            
-                                            <h4>Emergency Cases</h4>
-                                            <p class="text-justify">
+                                    <div class="inner m-0 p-3">
+                                        <div class="d-flex flex-column justify-content-start align-items-center">
+                                            <img src="{{ asset('img/Principlesir.jpg') }}" style="max-width: 85%" class="img-thumbnail" alt="">
+                                            <span class="h5 mt-2 mb-0">Prof. Md. Rafiqul Islam</span>
+                                            <span class="p-0">President of TGC Rover</span>
+                                            <h4 class="mt-3">বাণী</h4>
+                                            <p class="text-justify mt-1">
                                                 শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে।
                                                 শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে ...
+                                                <a href="#" class="m-0 p-0">Read More<i class="fa fa-long-arrow-right"></i></a>
                                             </p>
-                                            <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <!-- single-schedule -->
-                                <div class="single-schedule middle">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <i class="icofont-prescription"></i>
-                                        </div>
-                                        <div class="single-content">
-                                            <span>Fusce Porttitor</span>
-                                            <h4>Doctors Timetable</h4>
-                                            <p>Lorem ipsum sit amet consectetur adipiscing elit. Vivamus et erat in lacus convallis sodales.</p>
-                                            <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 col-md-12 col-12">
+                            <div class="col-lg-4 col-md-6 col-12 ">
+                                <!-- single-schedule -->
+                                <div class="single-schedule first">
+                                    <div class="inner m-0 p-3">
+                                        <div class="d-flex flex-column justify-content-start align-items-center">
+                                            <img src="{{ asset('img/RSL1.jpg') }}" style="max-width: 85%" class="img-thumbnail" alt="">
+                                            <span class="h5 mt-2 mb-0">Prof. Md. Sarowar Hosen</span>
+                                            <span class="p-0">Rover Scout Leader Rover</span>
+                                            <h4 class="mt-3">বাণী</h4>
+                                            <p class="text-justify mt-1">
+                                                শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে।
+                                                শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে ...
+                                                <a href="#" class="m-0 p-0">Read More<i class="fa fa-long-arrow-right"></i></a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 ">
+                                <!-- single-schedule -->
+                                <div class="single-schedule first">
+                                    <div class="inner m-0 p-3">
+                                        <div class="d-flex flex-column justify-content-start align-items-center">
+                                            <img src="{{ asset('img/RSL2.jpg') }}" style="max-width: 85%" class="img-thumbnail" alt="">
+                                            <span class="h5 mt-2 mb-0">Prof. Md. Rafiqul Islam</span>
+                                            <span class="p-0">Rover Scout Leader Girl</span>
+                                            <h4 class="mt-3">বাণী</h4>
+                                            <p class="text-justify mt-1">
+                                                শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে।
+                                                শিক্ষা শুধু বই পড়া নয়। মানুষের জীবনে বিকল্প কোনো কিছু নেই। শিক্ষার মাধ্যমে একজন মানুষ দক্ষ, বিনয়ী ও প্রকৃত মানুষ হয়ে উঠে ...
+                                                <a href="#" class="m-0 p-0">Read More<i class="fa fa-long-arrow-right"></i></a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            {{-- <div class="col-lg-4 col-md-12 col-12">
                                 <!-- single-schedule -->
                                 <div class="single-schedule last">
                                     <div class="inner">
@@ -134,7 +150,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -172,7 +188,7 @@
                             <!-- Start Single features -->
                             <div class="single-features">
                                 <div class="signle-icon">
-                                    <i class="icofont-ui-user-group"></i>                                    
+                                    <i class="icofont-ui-user-group"></i>
                                 </div>
                                 <h3>Join Rover Scout</h3>
                                 <p>রোভারিং এ যোগদানের জন্য অবশ্যই আপনাকে অত্র কলেজের শিক্ষার্থী হতে হবে।</p>
@@ -242,7 +258,7 @@
                                 </div>
                             </div>
                             <!-- End Single Fun -->
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
