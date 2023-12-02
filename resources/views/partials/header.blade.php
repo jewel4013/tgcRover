@@ -19,7 +19,7 @@
                     <ul class="top-contact">
                         <li><i class="fa fa-phone"></i>+880 1328-943878</li>
                         <li><i class="fa fa-envelope"></i><a href="mailto:info@tgcrover.com">info@tgcrover.com</a></li>
-                        <li><i class="fa fa-sign-in"></i><a href="{{ url('/login') }}">Log in/Register</a></li>
+                        <li><i class="fa fa-sign-in"></i><a href="{{ url('/login') }}">Log in</a></li>
                     </ul>
                     <!-- End Top Contact -->
                 </div>
@@ -47,7 +47,7 @@
                         <div class="main-menu">
                             <nav class="navigation">
                                 <ul class="nav menu">
-                                    <li class="active"><a href="#">Home</a></li>
+                                    <li class="active"><a href="{{ url('/') }}">Home</a></li>
                                     <li class=""><a href="#">Events <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">National Events</a></li>
@@ -59,15 +59,15 @@
                                         <ul class="dropdown">
                                             <li><a href="index.html">Rover Scout Leader</a></li>
                                             <li><a href="index.html">Senior Rover Mate</a></li>
-                                            <li><a href="index.html">Rover Mate</a></li>
+                                            {{-- <li><a href="index.html">Rover Mate</a></li> --}}
                                             <li><a href="index.html">Rover</a></li>
-                                            <li><a href="index.html">Rover Squire</a></li>
+                                            {{-- <li><a href="index.html">Rover Squire</a></li> --}}
                                             <li><a href="index.html">Former Rover</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Services </a></li>
                                     <li><a href="#">Awards </a></li>
-                                    <li><a href="#">Gallary </a></li>
+                                    <li><a href="{{ url('gallery') }}">Gallary </a></li>
                                     <li><a href="#">More <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">College Info</a></li>
