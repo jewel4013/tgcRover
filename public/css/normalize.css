@@ -505,8 +505,7 @@ Preloader Area CSS
 	opacity:0.8;
 }
 /* Bread Crumbs */
-.breadcrumbs {
-	background-image: url('../img/bread-bg.jpg');
+.breadcrumbs {	
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

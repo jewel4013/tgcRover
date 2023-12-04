@@ -10,7 +10,25 @@
 
 
 @section('bodyContent')
-	<div class="container-fluid mt-2 mb-4">
+	<!-- Breadcrumbs '/img/blockqoute-bg2.jpg' -->
+	<div class="breadcrumbs overlay" style="background-image: url({{ asset('img/blockqoute-bg2.jpg') }});">
+		<div class="container">
+			<div class="bread-inner">
+				<div class="row">
+					<div class="col-12">
+						<h2>Unit Gallery</h2>
+						<ul class="bread-list">
+							<li><a href="{{ url('/') }}">Home</a></li>
+							<li><i class="icofont-simple-right"></i></li>
+							<li class="active">Gallery</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Breadcrumbs -->
+	<div class="container-fluid mt-6 mb-4">
         <div class="d-flex justify-content-center">
             <form action="">
                 <div class="input-group mb-3">
