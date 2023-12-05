@@ -18,25 +18,25 @@
                     <!-- Top Contact -->
                     <ul class="top-contact">
                         <li><i class="fa fa-phone"></i>+880 1328-943878</li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:info@tgcrover.com">info@tgcrover.com</a></li>                        
+                        <li><i class="fa fa-envelope"></i><a href="mailto:info@tgcrover.com">info@tgcrover.com</a></li>
                         @auth
                             <div class="dropdownpro">
                                 <a class="dropbtnpro" href="#"><i class="fa fa-user" style="color: #1A76D1; padding-right: 5px"></i>{{ Auth::user()->name }}</a>
                                 <div class="dropdown-content-pro">
                                     <a href="{{ url('/profile') }}">Profile</a>
                                     <form method="POST" action="{{ route('logout') }}">
-                                        @csrf        
+                                        @csrf
                                         <a href="route('logout')"
                                                 onclick="event.preventDefault();
                                                             this.closest('form').submit();">
                                             Log out
-                                        </a>  
-                                    </form>                                                                      
+                                        </a>
+                                    </form>
                                 </div>
                             </div>
                         @else
                             <li><i class="fa fa-sign-in"></i><a href="{{ url('/login') }}">Log in</a></li>
-                        @endauth                        
+                        @endauth
                     </ul>
                     <!-- End Top Contact -->
                 </div>

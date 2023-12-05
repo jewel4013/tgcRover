@@ -1,6 +1,6 @@
 @extends('tgcLayout')
 
-@section('pageTitle', 'Tongi Govt College Rover & Girl-in Rover Unit')
+@section('pageTitle', 'Admission')
 
 @section('bodyContent')
     <!-- Breadcrumbs '/img/blockqoute-bg2.jpg' -->
@@ -70,7 +70,7 @@
                                 </p>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-wrapper">
                         <div class="timeline-yr">
                             <span>Step-4</span>
@@ -88,7 +88,7 @@
             </div>
             <div class="col-lg-2 row">
                 <div class="d-flex justify-content-center align-items-center">
-                    <span class="vr" style="width: 70%; height:100%">or</span>                  
+                    <span class="vr" style="width: 70%; height:100%">or</span>
                   </div>
             </div>
             <div class="col-lg-5 col-12">
@@ -134,7 +134,7 @@
                                 </p>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-wrapper">
                         <div class="timeline-yr">
                             <span>Step-4</span>
@@ -150,7 +150,7 @@
 
                 </div>
             </div>
-            
+
         </div>
     </div>
 
