@@ -31,7 +31,10 @@ Route::middleware('auth')->group(function () {
 Route::get('/gallery', function(){
     return view('gallery');
     // dd(Request::is('gallery'));
-
+});
+Route::get('/admission', function(){
+    return view('admission');
+    // dd(Request::is('gallery'));
 });
 
 

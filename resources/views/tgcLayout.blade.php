@@ -45,6 +45,7 @@
             <!-- Styles -->
             <link rel="stylesheet" href="{{ asset('css/tailwindcss.css') }}">            
             <link rel="stylesheet" href="{{ asset('css/profileButton.css') }}"> 
+            <link rel="stylesheet" href="{{ asset('css/admission.css') }}"> 
         @show
 
     </head>

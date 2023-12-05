@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-lg-1 col-12">
                         <div class="get-quote">
-                            <a href="appointment.html" class="btn">Admission</a>
+                            <a href="{{ url('/admission') }}" class="btn">Admission</a>
                         </div>
                     </div>
                 </div>
