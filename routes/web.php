@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +31,11 @@ Route::middleware('auth')->group(function () {
 Route::get('/gallery', function(){
     return view('gallery');
     // dd(Request::is('gallery'));
-    
+
 });
+
+
+
+
 
 require __DIR__.'/auth.php';
