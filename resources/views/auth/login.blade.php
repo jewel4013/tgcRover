@@ -53,5 +53,5 @@
                 {{ __('Create a new account') }}
             </a>
         </div>
-    </form>
+    </form>   
 </x-guest-layout>

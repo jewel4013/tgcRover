@@ -62,9 +62,15 @@ class RegisteredUserController extends Controller
             ]);
     
             event(new Registered($user));
+            Auth::login($user);    
     
-            Auth::login($user);
-    
+            if(Auth::user()->status == 0){
+                Auth::guard('web')->logout();
+                $request->session()->invalidate();
+                $request->session()->regenerateToken();            
+                return redirect('/login')->with('message', 'Your account is createded. You shoud wait for approvel Or Contact to your SRM.');
+            }
+
             return redirect(RouteServiceProvider::HOME);
 
             
