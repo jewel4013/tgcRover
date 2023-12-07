@@ -26,16 +26,17 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
-
+        
         if(Auth::user()->status == 0){
             Auth::guard('web')->logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();            
             return redirect('/login')->with('message', 'Your account is not approved. Please contact to your SRM.');
-        }
+        } 
+        
 
         $request->session()->regenerate();
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended('/profile'); //RouteServiceProvider::HOME
     }
 
     /**
@@ -46,6 +47,6 @@ class AuthenticatedSessionController extends Controller
         Auth::guard('web')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/login');
     }
 }

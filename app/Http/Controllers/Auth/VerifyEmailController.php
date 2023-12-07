@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 
 class VerifyEmailController extends Controller
 {
@@ -21,6 +22,13 @@ class VerifyEmailController extends Controller
 
         if ($request->user()->markEmailAsVerified()) {
             event(new Verified($request->user()));
+            
+            if(Auth::user()->status == 0){
+                Auth::guard('web')->logout();
+                $request->session()->invalidate();
+                $request->session()->regenerateToken();            
+                return redirect('/login')->with('success', 'Your account is createded. You shoud wait for approvel Or Contact to your SRM.');
+            }
         }
 
         return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');

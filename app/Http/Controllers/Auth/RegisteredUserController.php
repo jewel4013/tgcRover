@@ -48,7 +48,7 @@ class RegisteredUserController extends Controller
             $ext = $avatar->extension();            
             $currentTime = Carbon::now()->timestamp;            
             $avatarName = $currentTime.'_'.uniqid().'.'.$ext;
-            $avatar->move('img', $avatarName);
+            $avatar->move('img/profilePic', $avatarName);
 
 
             $user = User::create([
@@ -62,16 +62,10 @@ class RegisteredUserController extends Controller
             ]);
     
             event(new Registered($user));
-            Auth::login($user);    
-    
-            if(Auth::user()->status == 0){
-                Auth::guard('web')->logout();
-                $request->session()->invalidate();
-                $request->session()->regenerateToken();            
-                return redirect('/login')->with('message', 'Your account is createded. You shoud wait for approvel Or Contact to your SRM.');
-            }
+            Auth::login($user);     
+            
 
-            return redirect(RouteServiceProvider::HOME);
+            return redirect('/profile'); // RouteServiceProvider::HOME
 
             
         }

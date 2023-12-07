@@ -42,5 +42,17 @@
                 toastr.warning("{{ Session::get('message') }}");
             </script>        
         @endif
+
+        @if (Session::has('success'))
+            <script>
+                toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "timeOut": "10000",
+                }
+                toastr.success("{{ Session::get('success') }}");
+            </script>        
+        @endif
+        
     </body>
 </html>

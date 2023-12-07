@@ -1,11 +1,11 @@
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
+        {{ __('Hi '.Auth::user()->name.',') }}<br/> {{ __('Thanks for joining TGC Rover in online. Before getting started, could you verify your email address by clicking on the link we just emailed to you ?') }} <br/><br/> {{ __('If you didn\'t receive the email, we will gladly send you another.') }}
     </div>
 
     @if (session('status') == 'verification-link-sent')
         <div class="mb-4 font-medium text-sm text-green-600">
-            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+            {{ __('A new verification link has been sent to the email address: ') }}<span style="font-style: italic">{{ Auth::user()->email }}</span> {{ __('you provided during registration.') }}
         </div>
     @endif
 
