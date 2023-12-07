@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Tongi Govt College Rover & Girl-in Rover Unit') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -40,7 +40,7 @@
                     "progressBar": true,
                 }
                 toastr.warning("{{ Session::get('message') }}");
-            </script>        
+            </script>
         @endif
 
         @if (Session::has('success'))
@@ -51,8 +51,8 @@
                     "timeOut": "10000",
                 }
                 toastr.success("{{ Session::get('success') }}");
-            </script>        
+            </script>
         @endif
-        
+
     </body>
 </html>

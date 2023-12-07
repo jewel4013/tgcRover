@@ -1,5 +1,5 @@
 <section>
-    <header>
+    {{-- <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Profile Information') }}
         </h2>
@@ -7,7 +7,7 @@
         <p class="mt-1 text-sm text-gray-600">
             {{ __("Update your account's profile information and email address.") }}
         </p>
-    </header>
+    </header> --}}
 
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf
@@ -48,9 +48,9 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <button type="submit" class="btn btn-primary" style="z-index: 1000">{{ __('Save') }}</button>
 
-            @if (session('status') === 'profile-updated')
+            {{-- @if (session('status') === 'profile-updated')
                 <p
                     x-data="{ show: true }"
                     x-show="show"
@@ -58,7 +58,9 @@
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600"
                 >{{ __('Saved.') }}</p>
-            @endif
+            @endif --}}
+
+
         </div>
     </form>
 </section>
