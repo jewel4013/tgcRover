@@ -20,7 +20,7 @@
                         <li><i class="fa fa-phone"></i>+880 1328-943878</li>
                         <li><i class="fa fa-envelope"></i><a href="mailto:info@tgcrover.com">info@tgcrover.com</a></li>
                         @auth
-                            <div class="dropdownpro">
+                            <div class="dropdownpro {{ Request::is('profile') ? 'd-none' : '' }}">
                                 <a class="dropbtnpro" href="" onclick="event.preventDefault()"><i class="fa fa-user" style="color: #1A76D1; padding-right: 5px"></i>{{ Auth::user()->name }}</a>
                                 <div class="dropdown-content-pro">
                                     <a href="{{ url('/profile') }}">Profile</a>

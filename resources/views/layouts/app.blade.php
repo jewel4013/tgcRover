@@ -48,6 +48,8 @@
             <link rel="stylesheet" href="{{ asset('css/tailwindcss.css') }}">
             <link rel="stylesheet" href="{{ asset('css/profileButton.css') }}">
             <link rel="stylesheet" href="{{ asset('css/admission.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/profile_sidebars.css') }}">
+
         @show
 
 
@@ -177,6 +179,7 @@
             <script src="{{ asset('js/bootstrap.min.js') }}"></script>
             <!-- Main JS -->
             <script src="{{ asset('js/main.js') }}"></script>
+
 
             @if (Session::has('message'))
                 <script>
