@@ -191,7 +191,7 @@
                     toastr.options = {
                         "closeButton": true,
                         "progressBar": true,
-                        "timeOut": "2000",
+                        "timeOut": "10000",
                     }
                     toastr.success("{{ session('status') }}");
                 </script>

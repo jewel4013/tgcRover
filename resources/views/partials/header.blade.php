@@ -52,7 +52,7 @@
                     <div class="col-lg-3 col-md-3 col-12">
                         <!-- Start Logo -->
                         <div class="logo">
-                            <a href="{{ url('/') }}"><img src="img/unit_logo.png" alt="TGC Rover Logo"></a>
+                            <a href="{{ url('/') }}"><img src="{{ asset('img/unit_logo.png') }}" alt="TGC Rover Logo"></a>
                         </div>
                         <!-- End Logo -->
                         <!-- Mobile Nav -->

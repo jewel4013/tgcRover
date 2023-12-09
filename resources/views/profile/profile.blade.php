@@ -9,23 +9,26 @@
                 <a href="#">Services</a>
                 <a href="#">Client  askdf klasls</a>
                 <a href="#">Contact</a>
+                <a href="{{ url('profile/edit') }}">Edit Profile</a>
             </div>
             <div id="Pmain" class="container-fluid" style="">
                 <span id="toggleSymble" onclick="openNav()" class="closed">&#9932;</span>
-                <div class="d-flex-column" id="pmainContent">                 
-                    <div class="d-flex flex-column justify-content-start align-items-center">
-                        <img src="{{ asset('img/profilePic/'.Auth::user()->avatar) }}" style="" alt="Avatar">
-                        <h2>{{ Auth::user()->name }}</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <h2>Sidenav Push Example Lorem ipsum dolor sit, amet consectetur adipisicing</h2>
+                @section('profileContetn')
+                    <div class="d-flex-column" id="pmainContent">
+                        <div class="d-flex flex-column justify-content-start align-items-center">
+                            <img src="{{ asset('img/profilePic/'.Auth::user()->avatar) }}" style="" alt="Avatar">
+                            <h2>{{ Auth::user()->name }}</h2>
                         </div>
-                        <div class="col-md-8">
-                            <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>                            
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h2>Sidenav Push Example Lorem ipsum dolor sit, amet consectetur adipisicing</h2>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @show
             </div>
         </div>
     </div>
@@ -53,13 +56,13 @@
     @section('mainScripts')
         @parent
         <script>
-            function openNav() {                 
+            function openNav() {
                 var list = document.getElementById("toggleSymble").classList;
-                if(list == "closed"){                    
+                if(list == "closed"){
                     document.getElementById("pSidenav").style.marginLeft= "-250px";
                     document.getElementById("toggleSymble").innerHTML = "&#9776;";
                     list.remove("closed");
-                    list.add("open");                    
+                    list.add("open");
                 }else if(list == "open"){
                     document.getElementById("pSidenav").style.marginLeft = "0";
                     document.getElementById("toggleSymble").innerHTML = "&#9932;";

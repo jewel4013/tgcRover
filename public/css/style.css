@@ -245,6 +245,7 @@ body{
 .header{
 	background-color:#fff;
 	position:relative;
+    z-index: 1000;
 }
 .header .navbar-collapse{
 	padding:0;
