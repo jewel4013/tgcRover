@@ -45,7 +45,7 @@
     </div>
     <!-- End Topbar -->
     <!-- Header Inner -->
-    <div class="header-inner">
+    <div class="header-inner" >
         <div class="container">
             <div class="inner">
                 <div class="row">
