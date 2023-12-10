@@ -5,7 +5,7 @@
 
     @section('profileContetn')
 
-       
+
 
         {{-- Bios Edit  Form --}}
         <form method="post" action="{{ route('profile.boisEdit') }}">
@@ -16,7 +16,7 @@
                 <p>Please update your bois. * are required</p>
             </div>
             <hr>
-            <div class="row"> 
+            <div class="row">
                 <div class="col-lg-4 col-md-6 mb-3 bios_input">
                     <x-input-label for="father" :value="__('Father\'s name')" class="mb-1" />
                     <x-text-input id="father" name="father" type="text" class="mt-1 block w-full" :value="old('father', $user->bios->father)" required autocomplete="father" />
@@ -48,38 +48,61 @@
                     <x-input-error class="mt-2" :messages="$errors->get('nid_dob')" />
                 </div>
                 <div class="col-lg-4 col-md-6 mb-3 bios_input">
-                    <x-input-label for="height" :value="__('Height (in KG)')" class="mb-1" />
+                    <x-input-label for="height" :value="__('Height (in Inch)')" class="mb-1" />
                     <x-text-input id="height" name="height" type="text" class="mt-1 block w-full" :value="old('height', $user->bios->height)" required autocomplete="height" placeholder=""/>
                     <x-input-error class="mt-2" :messages="$errors->get('height')" />
                 </div>
                 <div class="col-lg-4 col-md-6 mb-3 bios_input">
-                    <x-input-label for="weight" :value="__('Weight (in Inch)')" class="mb-1" />
+                    <x-input-label for="weight" :value="__('Weight (in KG)')" class="mb-1" />
                     <x-text-input id="weight" name="weight" type="text" class="mt-1 block w-full" :value="old('weight', $user->bios->weight)" required autocomplete="weight" placeholder=""/>
                     <x-input-error class="mt-2" :messages="$errors->get('weight')" />
                 </div>
                 <div class="col-lg-4 col-md-6 mb-3 bios_input">
                     <x-input-label for="blood" :value="__('Blood Group')" class="mb-1" />
                     <x-select id="blood" class="block w-full" name="blood" required>
-                        <option value="" disabled selected hidden>{{ __('Select Your Blood Group') }}</option>                    
-                        <option value="1">abcdef</option>
-                        <option value="2">options</option>
-                        <option value="3">here</option>
+                        <option value="" selected hidden>{{ __('Select Your Blood Group') }}</option>
+                        <option value="A+">A positive (A+)</option>
+                        <option value="A-">A negative (A-)</option>
+                        <option value="B+">B positive (B+)</option>
+                        <option value="B-">B negative (B-)</option>
+                        <option value="O+">O positive (O+)</option>
+                        <option value="O-">O negative (O-)</option>
+                        <option value="AB+">AB positive (AB+)</option>
+                        <option value="AB-">AB negative (AB-)</option>
                     </x-select>
                     <x-input-error class="mt-2" :messages="$errors->get('blood')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="emergency" :value="__('Emergency Contact Person')" class="mb-1" />
+                    <x-text-input id="emergency" name="emergency" type="text" class="mt-1 block w-full" :value="old('emergency', $user->bios->emergency)" required autocomplete="emergency" placeholder=""/>
+                    <x-input-error class="mt-2" :messages="$errors->get('emergency')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="emobile" :value="__('Emergency Contact Person\'s Mobile')" class="mb-1" />
+                    <x-text-input id="emobile" name="emobile" type="text" class="mt-1 block w-full" :value="old('emobile', $user->bios->emobile)" required autocomplete="emobile" placeholder=""/>
+                    <x-input-error class="mt-2" :messages="$errors->get('emobile')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="religion" :value="__('Religion')" class="mb-1" />
+                    <x-select id="religion" class="block w-full" name="religion" required>
+                        <option value="" selected hidden>{{ __('Select Your Religion') }}</option>
+                        <option value="A+">Islam</option>
+                        <option value="B+">Hinduism</option>
+                        <option value="B-">Buddhism</option>
+                        <option value="O+">Christianity</option>
+                        <option value="O-">Others</option>
+                    </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('religion')" />
                 </div>
                 {{-- <div class="col-lg-4 col-md-6 mb-3 bios_input">
                     <x-input-label for="" :value="__('')" class="mb-1" />
                     <x-text-input id="" name="" type="text" class="mt-1 block w-full" :value="old('', $user->bios->)" required autocomplete="" placeholder=""/>
                     <x-input-error class="mt-2" :messages="$errors->get('')" />
                 </div> --}}
-                
-
-                
-                                  
             </div>
             <div class="flex items-center gap-4">
-                <x-primary-button>{{ __('Save') }}</x-primary-button> 
+                <x-primary-button>{{ __('Save') }}</x-primary-button>
             </div>
-        </form>            
+        </form>
     @endsection
 
