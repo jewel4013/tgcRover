@@ -25,6 +25,13 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function bios(Request $request): View
+    {
+        return view('profile.bios', [
+            'user' => $request->user(),
+        ]);
+    }
+
     /**
      * Update the user's profile information.
      */

@@ -25,24 +25,24 @@
   background-color: #fff;
 }
 
-#toggleSymble {
-  position: relative;
-  top: -5px;
-  left: -18px;
-  font-size: 36px;
-  background-color: #87CEFA;
-  border-radius: 0px 5px 5px 0px;
-}
+
 
 #Pmain {
   transition: margin-left .5s;
   padding:0px 16px 16px 16px;
 }
 
-#Pmain span{
+#toggleSymble {
+  position: relative;
+  top: 12px;
+  left: -16px;
+  font-size: 36px;
+  background-color: #87CEFA;
+  border-radius: 0px 5px 5px 0px;
   font-size:30px;
   cursor:pointer;
   transition: 0.5s;
+  padding: 5px;
 }
 #pmainContent{
   margin-top: -20px;

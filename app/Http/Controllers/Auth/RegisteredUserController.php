@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bios;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Carbon\Carbon;
@@ -59,6 +60,9 @@ class RegisteredUserController extends Controller
                 'avatar' => $avatarName,
                 'password' => Hash::make($request->password),
                 
+            ]);
+            Bios::create([
+                'user_id' => $user->id,
             ]);
     
             event(new Registered($user));
