@@ -94,6 +94,37 @@
                     </x-select>
                     <x-input-error class="mt-2" :messages="$errors->get('religion')" />
                 </div>
+                <div class="col-12">Present Address</div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pe_distric" :value="__('Distric')" class="mb-1" />
+                    <x-select id="pe_distric" class="block w-full" name="pe_distric" required>
+                        <option value="" selected hidden>{{ __('Select Your Distric') }}</option>
+                        <option value="Barishal">Barishal</option>
+                        <option value="Chattogram">Chattogram</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Sylhet">Sylhet</option>
+                    </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('pe_distric')" />
+                </div>
+
+
+                {{-- <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="" :value="__('')" class="mb-1" />
+                    <x-select id="" class="block w-full" name="" required>
+                        <option value="" selected hidden>{{ __('Select Your ') }}</option>
+                        <option value="A+">Islam</option>
+                        <option value="B+">Hinduism</option>
+                        <option value="B-">Buddhism</option>
+                        <option value="O+">Christianity</option>
+                        <option value="O-">Others</option>
+                    </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('')" />
+                </div> --}}
+
                 {{-- <div class="col-lg-4 col-md-6 mb-3 bios_input">
                     <x-input-label for="" :value="__('')" class="mb-1" />
                     <x-text-input id="" name="" type="text" class="mt-1 block w-full" :value="old('', $user->bios->)" required autocomplete="" placeholder=""/>
@@ -104,5 +135,13 @@
                 <x-primary-button>{{ __('Save') }}</x-primary-button>
             </div>
         </form>
+
+
+
+        @section('mainScripts')
+            @parent
+
+            <script src="{{ asset('js/distric.js') }}"></script>
+        @endsection
     @endsection
 
