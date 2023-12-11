@@ -94,11 +94,16 @@
                     </x-select>
                     <x-input-error class="mt-2" :messages="$errors->get('religion')" />
                 </div>
-                <div class="col-12">Present Address</div>
+
+
+
+                <div class="col-12 d-flex justify-content-center align-items-center mt-4">
+                    <h4>Present Address</h4>
+                </div> 
                 <div class="col-lg-4 col-md-6 mb-3 bios_input">
-                    <x-input-label for="pe_distric" :value="__('Distric')" class="mb-1" />
-                    <x-select id="pe_distric" class="block w-full" name="pe_distric" required>
-                        <option value="" selected hidden>{{ __('Select Your Distric') }}</option>
+                    <x-input-label for="pe_division" :value="__('Division')" class="mb-1" />
+                    <x-select id="pe_division" class="block w-full" name="pe_division" onchange="divisionsList();" required>
+                        <option value="" selected hidden>{{ __('Select Your Division') }}</option>
                         <option value="Barishal">Barishal</option>
                         <option value="Chattogram">Chattogram</option>
                         <option value="Dhaka">Dhaka</option>
@@ -108,8 +113,82 @@
                         <option value="Rangpur">Rangpur</option>
                         <option value="Sylhet">Sylhet</option>
                     </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('pe_division')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pe_distric" :value="__('Distric')" class="mb-1" />
+                    <x-select id="pe_distric" class="block w-full" name="pe_distric" onchange="thanaList();" required>
+                        <option value="" selected hidden>{{ __('Select Your Distric') }}</option>
+                        
+                    </x-select>
                     <x-input-error class="mt-2" :messages="$errors->get('pe_distric')" />
                 </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pe_thana" :value="__('Thana')" class="mb-1" />
+                    <x-select id="pe_thana" class="block w-full" name="pe_thana" required>
+                        <option value="" selected hidden>{{ __('Select Your Thana') }}</option>
+                        
+                    </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('pe_thana')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pe_postoffice" :value="__('Post Office')" class="mb-1" />
+                    <x-text-input id="pe_postoffice" name="pe_postoffice" type="text" class="mt-1 block w-full" :value="old('pe_postoffice', $user->bios->pe_postoffice)" required autocomplete="pe_postoffice" placeholder=""/>
+                    <x-input-error class="mt-2" :messages="$errors->get('pe_postoffice')" />
+                </div>
+                <div class="col-lg-8 col-md-12 mb-3 bios_input">
+                    <x-input-label for="pe_village" :value="__('Village/Woard/House/Road')" class="mb-1" />
+                    <x-text-input id="pe_village" name="pe_village" type="text" class="mt-1 block w-full" :value="old('pe_village', $user->bios->pe_village)" required autocomplete="pe_village" placeholder=""/>
+                    <x-input-error class="mt-2" :messages="$errors->get('pe_village')" />
+                </div>
+
+
+
+                <div class="col-12 d-flex justify-content-center align-items-center mt-4">
+                    <h4>Perminent Address</h4>
+                </div> 
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pa_division" :value="__('Division')" class="mb-1" />
+                    <x-select id="pa_division" class="block w-full" name="pa_division" required>
+                        <option value="" selected hidden>{{ __('Select Your Division') }}</option>
+                        <option value="Barishal">Barishal</option>
+                        <option value="Chattogram">Chattogram</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Sylhet">Sylhet</option>
+                    </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('pa_division')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pa_distric" :value="__('Distric')" class="mb-1" />
+                    <x-select id="pa_distric" class="block w-full" name="pa_distric" required>
+                        <option value="" selected hidden>{{ __('Select Your Distric') }}</option>
+                        
+                    </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('pa_distric')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pa_thana" :value="__('Thana')" class="mb-1" />
+                    <x-select id="pa_thana" class="block w-full" name="pa_thana" required>
+                        <option value="" selected hidden>{{ __('Select Your Thana') }}</option>
+                        
+                    </x-select>
+                    <x-input-error class="mt-2" :messages="$errors->get('pa_thana')" />
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 bios_input">
+                    <x-input-label for="pa_postoffice" :value="__('Post Office')" class="mb-1" />
+                    <x-text-input id="pa_postoffice" name="pa_postoffice" type="text" class="mt-1 block w-full" :value="old('pa_postoffice', $user->bios->pa_postoffice)" required autocomplete="pa_postoffice" placeholder=""/>
+                    <x-input-error class="mt-2" :messages="$errors->get('pa_postoffice')" />
+                </div>
+                <div class="col-lg-8 col-md-12 mb-3 bios_input">
+                    <x-input-label for="pa_village" :value="__('Village/Woard/House/Road')" class="mb-1" />
+                    <x-text-input id="pa_village" name="pa_village" type="text" class="mt-1 block w-full" :value="old('pa_village', $user->bios->pa_village)" required autocomplete="pa_village" placeholder=""/>
+                    <x-input-error class="mt-2" :messages="$errors->get('pe_village')" />
+                </div>
+                
 
 
                 {{-- <div class="col-lg-4 col-md-6 mb-3 bios_input">

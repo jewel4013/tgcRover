@@ -25,8 +25,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth', 'verified')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::get('/profile/bios', [ProfileController::class, 'bios'])->name('profile.bios');
-    Route::post('/profile/bios', [ProfileController::class, 'boisCreate'])->name('profile.boisCreate');
+    Route::get('/profile/bios', [ProfileController::class, 'bios'])->name('profile.bios');    
     Route::patch('/profile/bios', [ProfileController::class, 'boisEdit'])->name('profile.boisEdit');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
