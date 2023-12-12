@@ -4,7 +4,7 @@ Author Name: Naimur Rahman
 Website: http://wpthemesgrid.com/
 Description: Mediplus - Doctor HTML Template.
 Version:	1.1
-========================================*/ 
+========================================*/
 
 /*--------------------------------------------------------------
 # Normalize
@@ -513,7 +513,7 @@ Preloader Area CSS
 	opacity:0.8;
 }
 /* Bread Crumbs */
-.breadcrumbs {	
+.breadcrumbs {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -683,7 +683,7 @@ input[type="submit"] {
 	line-height: 1;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
@@ -732,7 +732,7 @@ select {
 
 textarea {
 	width: 100%;
-}
+} */
 
 /*--------------------------------------------------------------
 # Navigation

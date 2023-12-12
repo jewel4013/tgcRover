@@ -22,7 +22,7 @@
             <!-- Bootstrap CSS -->
             <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
             <!-- Nice Select CSS -->
-            <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}">
+            {{-- <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}"> --}}
             <!-- Font Awesome CSS -->
             <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
             <!-- icofont CSS -->
@@ -59,7 +59,7 @@
 
 
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased" onload="disableFun();">
         {{-- <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 
