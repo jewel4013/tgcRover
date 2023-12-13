@@ -4,6 +4,7 @@
 function disableFun(){
     var disabledData = document.getElementById('pe_division').value;
     var disabledData2 = document.getElementById('pe_distric').value;
+
     if(disabledData == "Jewel"){
         document.getElementById('pe_distric').disabled = true;
     }

@@ -4,18 +4,26 @@
         <div class="d-flex p-0">
             <div id="pSidenav" class="pSidenav">
                 {{-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> --}}
-                <a href="#">{{ Auth::user()->name }}</a>
+                <a href="{{ url('profile') }}">{{ Auth::user()->name }}</a>
                 <a href="#">About</a>
                 <a href="#">Services</a>
                 <a href="#">Client  askdf klasls</a>
                 <a href="#">Contact</a>
                 <a href="{{ url('profile/edit') }}">Edit Profile</a>
                 <a href="{{ url('profile/bios') }}">Update Bios</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        Log out
+                    </a>
+                </form>
             </div>
             <div id="Pmain" class="container-fluid" style="">
                 <span id="toggleSymble" onclick="openNav()" class="closed">&#9932;</span>
-                
-                
+
+
                     @section('profileContetn')
                         <div class="d-flex-column" id="pmainContent">
                             <div class="d-flex flex-column justify-content-start align-items-center">
@@ -32,7 +40,7 @@
                             </div>
                         </div>
                     @show
-              
+
             </div>
         </div>
     </div>

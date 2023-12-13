@@ -1,3 +1,4 @@
+{{-- {{ dd()}} --}}
 @extends('profile.profile')
 
 
@@ -11,7 +12,7 @@
         <form method="post" action="{{ route('profile.boisEdit') }}">
             @csrf
             @method('patch')
-            
+
             <div class="d-flex flex-column justify-content-start align-items-center">
                 <h2>Hi {{ Auth::user()->name }}</h2>
                 <p>Please update your bois. * are required</p>
@@ -119,7 +120,7 @@
                 <div class="col-lg-4 col-md-6 mb-3 bios_input">
                     <x-input-label for="pe_distric" :value="__('Distric')" class="mb-1" />
                     <x-select id="pe_distric" class="block w-full" name="pe_distric" onchange="thanaList();" required  title="If you want to change distric, change division first.">
-                        <option :value="Jewel" {{ Auth::user()->bios->pe_distric ? 'hidden' : 'selected' }}>{{ __('Select Your Division First') }}</option>
+                        <option value="Jewel" {{ Auth::user()->bios->pe_distric ? 'hidden' : 'selected' }}>{{ __('Select Your Division First') }}</option>
                         <option :value="{{ Auth::user()->bios->pe_distric }}" {{ Auth::user()->bios->pe_distric ? 'selected' : '' }}>{{ Auth::user()->bios->pe_distric }}</option>
 
                     </x-select>
@@ -169,7 +170,7 @@
                 <div class="col-lg-4 col-md-6 mb-3 bios_input">
                     <x-input-label for="pa_distric" :value="__('Distric')" class="mb-1" />
                     <x-select id="pa_distric" class="block w-full" name="pa_distric" onchange="pa_thanaList();" required title="If you want to change distric, change division first.">
-                        <option :value="Jewel" {{ Auth::user()->bios->pa_distric ? 'hidden' : 'selected' }}>{{ __('Select Your Division First') }}</option>
+                        <option value="Jewel" {{ Auth::user()->bios->pa_distric ? 'hidden' : 'selected' }}>{{ __('Select Your Division First') }}</option>
                         <option :value="{{ Auth::user()->bios->pa_distric }}" {{ Auth::user()->bios->pa_distric ? 'selected' : '' }}>{{ Auth::user()->bios->pa_distric }}</option>
 
                     </x-select>

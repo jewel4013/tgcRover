@@ -34,7 +34,7 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],            
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'user_name' => ['required', 'string', 'lowercase', 'max:255', 'unique:'.User::class],
             'mobile' => ['required', 'string', 'min:11', 'max:11',],
@@ -46,33 +46,34 @@ class RegisteredUserController extends Controller
 
         if(request()->hasFile('avatar')){
             $avatar = $request->avatar;
-            $ext = $avatar->extension();            
-            $currentTime = Carbon::now()->timestamp;            
+            $ext = $avatar->extension();
+            $currentTime = Carbon::now()->timestamp;
             $avatarName = $currentTime.'_'.uniqid().'.'.$ext;
             $avatar->move('img/profilePic', $avatarName);
 
 
             $user = User::create([
-                'name' => $request->name,                
+                'name' => $request->name,
                 'email' => $request->email,
                 'user_name' => $request->user_name,
                 'mobile' => $request->mobile,
                 'avatar' => $avatarName,
                 'password' => Hash::make($request->password),
-                
+
             ]);
             Bios::create([
                 'user_id' => $user->id,
+                'created_at' => $user->created_at,
             ]);
-    
+
             event(new Registered($user));
-            Auth::login($user);     
-            
+            Auth::login($user);
+
 
             return redirect('/profile'); // RouteServiceProvider::HOME
 
-            
+
         }
-        
+
     }
 }
