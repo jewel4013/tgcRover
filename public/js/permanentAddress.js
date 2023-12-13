@@ -1,20 +1,22 @@
-function disableFun(){
-    var disabledData = document.getElementById('pe_division').firstElementChild.text;
-    var disabledData2 = document.getElementById('pe_distric').firstElementChild.text;
-    // console.log(demo);
-    if(disabledData == "Select Your Division"){
-        document.getElementById('pe_distric').disabled = true;
+
+// Permanent Address ====>>> pa
+
+function pa_disableFun(){
+    var disabledData = document.getElementById('pa_division').value;
+    var disabledData2 = document.getElementById('pa_distric').value;
+    if(disabledData == "Jewel"){
+        document.getElementById('pa_distric').disabled = true;
     }
-    if(disabledData2 == "Select Your Division First"){
-        document.getElementById('pe_thana').disabled = true;
+    if(disabledData2 == "Jewel"){
+        document.getElementById('pa_thana').disabled = true;
     }
 }
 
 // Division Section select
-function divisionsList() {
-    document.getElementById('pe_distric').disabled = false;
+function pa_divisionsList() {
+    document.getElementById('pa_distric').disabled = false;
 	// get value from division lists
-	var diviList = document.getElementById('pe_division').value;
+	var diviList = document.getElementById('pa_division').value;
 
 	// set barishal division districts
 	if(diviList == 'Barishal'){
@@ -28,13 +30,10 @@ function divisionsList() {
 	else if(diviList == 'Dhaka') {
 		var disctList = '<option disabled selected>Select Your Distric</option><option value="Dhaka">Dhaka</option><option value="Faridpur">Faridpur</option><option value="Gazipur">Gazipur</option><option value="Gopalganj">Gopalganj</option><option value="Kishoreganj">Kishoreganj</option><option value="Madaripur">Madaripur</option><option value="Manikganj">Manikganj</option><option value="Munshiganj">Munshiganj</option><option value="Narayanganj">Narayanganj</option><option value="Narsingdi">Narsingdi</option><option value="Rajbari">Rajbari</option><option value="Shariatpur">Shariatpur</option><option value="Tangail">Tangail</option>';
 	}
-
 	else if(diviList == 'Khulna') {
 		var disctList = '<option disabled selected>Select Your Distric</option><option value="Bagerhat">Bagerhat</option><option value="Chuadanga">Chuadanga</option><option value="Jashore">Jashore</option><option value="Jhenaidah">Jhenaidah</option><option value="Khulna">Khulna</option><option value="Kushtia">Kushtia</option><option value="Magura">Magura</option><option value="Meharpur">Meharpur</option><option value="Narail">Narail</option><option value="Satkhira">Satkhira</option>';
 	}
-
-	else if(diviList ==
-		'Mymensingh') {
+	else if(diviList == 'Mymensingh') {
 		var disctList = '<option disabled selected>Select Your Distric</option><option value="Jamalpur">Jamalpur</option><option value="Mymensingh">Mymensingh</option><option value="Netrokona">Netrokona</option><option value="Sherpur">Sherpur</option>';
 	}
 	else if(diviList == 'Rajshahi') {
@@ -48,14 +47,14 @@ function divisionsList() {
 	}
 
 	//  set/send districts name to District lists from division
-	document.getElementById("pe_distric").innerHTML= disctList;
+	document.getElementById("pa_distric").innerHTML= disctList;
 }
 
 // Thana Section select
-function thanaList(){
-    document.getElementById('pe_thana').disabled = false;
+function pa_thanaList(){
+    document.getElementById('pa_thana').disabled = false;
 
-	var DisList = document.getElementById('pe_distric').value;
+	var DisList = document.getElementById('pa_distric').value;
 	if(DisList == 'Bagerhat') {
 		var thanaList = '<option value="">Select Your Thana</option><option value="Bagerhat Sadar">Bagerhat Sadar</option><option value="Chitalmari">Chitalmari</option><option value="Fakirhat">Fakirhat</option><option value="Kachua">Kachua</option><option value="Mollahat">Mollahat</option><option value="Mongla">Mongla</option><option value="Morrelganj">Morrelganj</option><option value="Rampal">Rampal</option><option value="Sarankhola">Sarankhola</option><option value="Others">Others</option>';
 	}
@@ -111,7 +110,7 @@ function thanaList(){
 		var thanaList = '<option value="">Select Your Thana</option><option value="Fulchhari">Fulchhari</option><option value="Gaibandha Sadar">Gaibandha Sadar</option><option value="Gobidaganj">Gobidaganj</option><option value="Palashbari">Palashbari</option><option value="Sadullapur">Sadullapur</option><option value="Saghatta">Saghatta</option><option value="Sundarganj">Sundarganj</option><option value="Others">Others</option>';
 	}
 	if(DisList == 'Gazipur') {
-		var thanaList = '<option value="">Select Your Thana</option><option value="Gazipur Sadar">Gazipur Sadar</option><option value="Kaliakair">Kaliakair</option><option value="Kaliganj">Kaliganj</option><option value="Kapasia">Kapasia</option><option value="Sreepur">Sreepur</option><option value="Tongi">Tongi</option><option value="Others">Others</option>';
+		var thanaList = '<option value="">Select Your Thana</option><option value="Gazipur Sadar">Gazipur Sadar</option><option value="Kaliakair">Kaliakair</option><option value="Kaliganj">Kaliganj</option><option value="Kapasia">Kapasia</option><option value="Sreepur">Sreepur</option><option value="Tongi East">Tongi East</option><option value="Tongi West">Tongi West</option><option value="Others">Others</option>';
 	}
 	if(DisList == 'Gopalganj') {
 		var thanaList = '<option value="">Select Your Thana</option><option value="Gopalganj Sadar">Gopalganj Sadar</option><option value="Kashiani">Kashiani</option><option value="Kotalipara">Kotalipara</option><option value="Muksudpur">Muksudpur</option><option value="Tungi Para">Tungi Para</option><option value="Others">Others</option>';
@@ -250,5 +249,5 @@ function thanaList(){
 	}
 
 
-	document.getElementById("pe_thana").innerHTML= thanaList;
+	document.getElementById("pa_thana").innerHTML= thanaList;
 }

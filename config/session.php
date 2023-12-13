@@ -128,7 +128,7 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
+        Str::slug(env('APP_NAME', 'Tongi Govt College Rover & Girtl-In Rover Unit'), '_').'_session'
     ),
 
     /*

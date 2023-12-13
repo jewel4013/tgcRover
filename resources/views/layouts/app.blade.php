@@ -59,7 +59,7 @@
 
 
     </head>
-    <body class="font-sans antialiased" onload="disableFun();">
+    <body class="font-sans antialiased" onload="disableFun(); pa_disableFun();">
         {{-- <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 
@@ -195,8 +195,18 @@
                     }
                     toastr.success("{{ session('status') }}");
                 </script>
-
             @endif
+
+            @if (Session::has('biosUpdate'))
+            <script>
+                 toastr.options = {
+                        "closeButton": true,
+                        "progressBar": true,
+                        "timeOut": "10000",
+                    }
+                toastr.success("{{ Session::get('biosUpdate') }}");
+            </script>
+        @endif
 
 
         @show
