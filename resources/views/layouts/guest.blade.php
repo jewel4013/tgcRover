@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="icon" href="{{ asset('img/rover_logo.png') }}">
-
-        <title>{{ config('app.name', 'Tongi Govt College Rover & Girl-in Rover Unit') }}</title>
+        <title>@yield('pageTitle')</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
