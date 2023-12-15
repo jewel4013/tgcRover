@@ -5,6 +5,7 @@
             <div id="pSidenav" class="pSidenav">
                 {{-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> --}}
                 <a href="{{ url('profile') }}">{{ Auth::user()->name }}</a>
+                <a href="{{ url('/admin/dashboard') }}" class="">Dashboard</a>
                 <a href="#">About</a>
                 <a href="#">Services</a>
                 <a href="#">Client  askdf klasls</a>

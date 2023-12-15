@@ -4,8 +4,11 @@
     @section('bodyContent')
         <div class="container">
             <div class="row mt-5">
-                <div class="col-lg-2 d-flex justify-content-center align-items-center p-4">
-                    <a href="{{ url('/') }}"><img src="{{ asset('img/unit_logo.png') }}" alt="Unit Logo Img"></a>
+                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('img/unit_logo.png') }}" alt="Unit Logo Img">
+                    </a>
+                    <h5 class="text-center">Tongi Govt College Rover & Girl-in Rover Unit</h5>
                 </div>
                 <div class="col-lg-5 col-md-6 d-flex flex-column justify-content-center align-items-center">
                     <h2>Some rules for sign up</h2>
@@ -18,13 +21,13 @@
                         <li>সাইন আপ করার পরই আপনি লগ ইন করতে পারবেন না। আপনার একাউন্টটি একজন এডমিন দ্বারা সত্যায়িক করা হবে। সে পর্যন্ত অপেক্ষা করতে হবে।</li>
                         <li>সত্যায়িতের জন্য এডমিন আপানার দেয়া মোবাইল নাম্বারে কল করে কিছু তথ্য জানতে চাইতে পারে।</li>
                         <li>অনুগ্রহ পূর্বক উপরের শর্ত বহির্ভূত কেউ সাইন আপ করবেন না।</li>
-                        
+
                     </ol>
                 </div>
                 <div class="col-lg-5 col-md-6">
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" >
                         @csrf
-                        <div class="row shadow p-3 mb-5 bg-body rounded">                            
+                        <div class="row shadow-lg p-3 mb-5 bg-body rounded">
                             <!-- Name -->
                             <div class="">
                                 <x-input-label for="name" :value="__('Full Name')" />
@@ -84,12 +87,12 @@
 
                             </div>
 
-                            <div class="flex d-flex justify-content-between align-items-center mt-3">
+                            <div class="flex d-lg-flex  d-md-flex d-sm-column justify-content-between align-items-center mt-3">
                                 <div class="">
                                     <button class="btn btn-success w-full">
                                         {{ __('Register') }}
                                     </button>
-                                </div>                            
+                                </div>
                                 <div>or</div>
                                 <div class="">
                                     <a class="btn btn-primary w-full" href="{{ route('login') }}">

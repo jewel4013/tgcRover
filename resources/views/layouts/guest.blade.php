@@ -16,7 +16,7 @@
         <!-- Scripts -->
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     </head>
-    <body>
+    <body style="background: #F0F2F5;">
 
 
         @yield('bodyContent')
