@@ -861,43 +861,52 @@
         <!-- Info boxes -->
         <div class="row">
             <div class="col-12 col-sm-6 col-md-3">
+              <a href="#" class="">
                 <div class="info-box mb-3">
                     <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">New Members</span>
+                        <span class="info-box-text">Member Reequest</span>
                         <span class="info-box-number">2,000</span>
                     </div>
                 </div>
+              </a>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
+              <a href="#" class="">
                 <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fa-solid fa-tents"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">New Event</span>
+                        <span class="info-box-text">Event Request</span>
                         <span class="info-box-number">10</span>
                     </div>
                 </div>
+              </a>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
+              <a href="#" class="">
                 <div class="info-box mb-3">
-                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+                    <span class="info-box-icon bg-success elevation-1"><i class="fa-solid fa-award"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Likes</span>
-                        <span class="info-box-number">41,410</span>
+                        <span class="info-box-text">Award Request</span>
+                        <span class="info-box-number">7</span>
                     </div>
                 </div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <a href="#" class="">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-icons"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Extracurricular</span>
+                        <span class="info-box-number">41</span>
+                    </div>
+                </div>
+              </a>
             </div>
             <!-- fix for small devices only -->
             <div class="clearfix hidden-md-up"></div>
-            <div class="col-12 col-sm-6 col-md-3">
-                <div class="info-box mb-3">
-                    <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
-                    <div class="info-box-content">
-                        <span class="info-box-text">Sales</span>
-                        <span class="info-box-number">760</span>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
         <!-- /.row -->
@@ -906,7 +915,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title">Monthly Recap Report</h5>
+                <h5 class="card-title">Active Banners</h5>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -932,60 +941,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <div class="row">
-                  <div class="col-md-8">
-                    <p class="text-center">
-                      <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-                    </p>
 
-                    <div class="chart">
-                      <!-- Sales Chart Canvas -->
-                      <canvas id="salesChart" height="180" style="height: 180px;"></canvas>
-                    </div>
-                    <!-- /.chart-responsive -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-md-4">
-                    <p class="text-center">
-                      <strong>Goal Completion</strong>
-                    </p>
-
-                    <div class="progress-group">
-                      Add Products to Cart
-                      <span class="float-right"><b>160</b>/200</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-primary" style="width: 80%"></div>
-                      </div>
-                    </div>
-                    <!-- /.progress-group -->
-
-                    <div class="progress-group">
-                      Complete Purchase
-                      <span class="float-right"><b>310</b>/400</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-danger" style="width: 75%"></div>
-                      </div>
-                    </div>
-
-                    <!-- /.progress-group -->
-                    <div class="progress-group">
-                      <span class="progress-text">Visit Premium Page</span>
-                      <span class="float-right"><b>480</b>/800</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-success" style="width: 60%"></div>
-                      </div>
-                    </div>
-
-                    <!-- /.progress-group -->
-                    <div class="progress-group">
-                      Send Inquiries
-                      <span class="float-right"><b>250</b>/500</span>
-                      <div class="progress progress-sm">
-                        <div class="progress-bar bg-warning" style="width: 50%"></div>
-                      </div>
-                    </div>
-                    <!-- /.progress-group -->
-                  </div>
-                  <!-- /.col -->
                 </div>
                 <!-- /.row -->
               </div>
@@ -1698,6 +1654,7 @@
 <script src="{{ asset('js/admin_js/adminlte.js') }}"></script>
 <script src="https://kit.fontawesome.com/f820eab44a.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/admin_js/demo.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
