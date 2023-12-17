@@ -42,7 +42,7 @@
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>College Info</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Extracurricular</a></li>
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+                                    <li><a href="{{ url('/faq') }}"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
                                 </ul>
                             </div>
                         </div>

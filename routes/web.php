@@ -40,6 +40,10 @@ Route::get('/admission', function(){
     return view('admission');
     // dd(Request::is('gallery'));
 });
+Route::get('/faq', function(){
+    return view('faq');
+    // dd(Request::is('gallery'));
+});
 
 
 

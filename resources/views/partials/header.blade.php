@@ -10,7 +10,7 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Notice</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="{{ url('/faq') }}">FAQ</a></li>
                     </ul>
                     <!-- End Contact -->
                 </div>
