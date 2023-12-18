@@ -204,15 +204,15 @@
                 Dashboard
                 {{-- <i class="right fas fa-angle-left"></i> --}}
               </p>
-            </a>            
-          </li>          
+            </a>
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Members
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -246,7 +246,7 @@
                   <p>Member Request</p>
                   <span class="badge badge-info right">6</span>
                 </a>
-              </li>              
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -259,7 +259,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">                                    
+                <a href="#" class="nav-link">
                   <i class="fa-solid fa-caret-right nav-icon"></i>
                   <p>International Events</p>
                 </a>
@@ -298,12 +298,12 @@
                 Services
               </p>
             </a>
-          </li>                 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa-solid fa-award"></i>    
+              <i class="nav-icon fa-solid fa-award"></i>
               <p>
-                Awards                
+                Awards
               </p>
             </a>
           </li>
@@ -322,7 +322,7 @@
                 About Us
               </p>
             </a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fa-solid fa-graduation-cap"></i>
@@ -330,12 +330,44 @@
                 College Info
               </p>
             </a>
-          </li>  
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fa-solid fa-icons"></i>
               <p>
-                Extracurricular                
+                Extracurricular
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-file-pen"></i>
+              <p>
+                Admission
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-regular fa-envelope"></i>
+              <p>
+                Contact Us
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-bell"></i>
+              <p>
+                Notice
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-clipboard-question"></i>
+              <p>
+                FAQ
               </p>
             </a>
           </li>
@@ -471,7 +503,7 @@
                 <span class="badge badge-info right">2</span>
               </p>
             </a>
-          </li>          
+          </li>
           <li class="nav-item">
             <a href="pages/kanban.html" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
