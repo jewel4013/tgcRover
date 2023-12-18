@@ -65,13 +65,6 @@
                             <nav class="navigation">
                                 <ul class="nav menu">
                                     <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
-                                    <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="#">Events <i class="icofont-rounded-down"></i></a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">National Events</a></li>
-                                            <li><a href="index.html">Distric Events</a></li>
-                                            <li><a href="index.html">Internal Events</a></li>
-                                        </ul>
-                                    </li>
                                     <li class="{{ Request::is('members') ? 'active' : '' }}"><a href="#">Members <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">Rover Scout Leader</a></li>
@@ -82,6 +75,13 @@
                                             <li><a href="index.html">Former Rover</a></li>
                                         </ul>
                                     </li>
+                                    <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="#">Events <i class="icofont-rounded-down"></i></a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">National Events</a></li>
+                                            <li><a href="index.html">Distric Events</a></li>
+                                            <li><a href="index.html">Internal Events</a></li>
+                                        </ul>
+                                    </li>                                    
                                     <li class="{{ Request::is('services') ? 'active' : '' }}"><a href="#">Services </a></li>
                                     <li class="{{ Request::is('awards') ? 'active' : '' }}"><a href="#">Awards </a></li>
                                     <li class="{{ Request::is('gallery') ? 'active' : '' }}"><a href="{{ url('gallery') }}">Gallary </a></li>
