@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminControl;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\userControl;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::patch('/profile/bios', [ProfileController::class, 'boisEdit'])->name('profile.boisEdit');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/admin/dashboard', [AdminControl::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/members', [userControl::class, 'members'])->name('admin.member.request');
 });
 
 Route::get('/gallery', function(){
