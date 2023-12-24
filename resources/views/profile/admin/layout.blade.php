@@ -873,9 +873,9 @@
         @yield('adminMainContent')
     </div>
     <!-- /.content-wrapper -->
-  
 
- 
+
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -902,6 +902,7 @@
 <script src="https://kit.fontawesome.com/f820eab44a.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/admin_js/demo.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+@yield('script')
 
 </body>
 </html>
