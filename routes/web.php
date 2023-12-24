@@ -31,7 +31,8 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::patch('/profile/bios', [ProfileController::class, 'boisEdit'])->name('profile.boisEdit');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/admin/dashboard', [AdminControl::class, 'index'])->name('admin.dashboard');
-    Route::get('/admin/members', [userControl::class, 'members'])->name('admin.member.request');
+    Route::get('/admin/members', [userControl::class, 'members'])->name('admin.members');
+    Route::get('/admin/members/panding', [userControl::class, 'pendingMembers'])->name('admin.member.pendingMembers');
 });
 
 Route::get('/gallery', function(){

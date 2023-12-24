@@ -11,9 +11,9 @@ class userControl extends Controller
      * Display a listing of the resource.
      */
 
-    public function members(){
-        return view('profile.admin.member', [
-            'pandingUser' => User::where('status', 0)->get(),
+    public function pendingMembers(){
+        return view('profile.admin.pendingMember', [
+            'pandingUser' => User::where('status', 0)->latest()->get(),
         ]);
     }
     

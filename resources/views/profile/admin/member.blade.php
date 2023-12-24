@@ -1,7 +1,22 @@
 @extends('profile.admin.layout')
 
 @section('adminMainContent')
-    <h1>Hi</h1>
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 @endsection
 
 {{-- {{ dd($pandingUser)->toarray() }} --}}
