@@ -241,7 +241,7 @@
                   <p>Former Rover</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item pendingNumber">
                 <a href="{{ url('/admin/members/panding') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Member Request</p>
@@ -913,6 +913,7 @@
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       }
   });
+
 </script>
 @yield('script')
 

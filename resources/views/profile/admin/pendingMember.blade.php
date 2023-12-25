@@ -4,6 +4,7 @@
     <div class="cardList">
         <div class="p-3">
             <h2 class="text-center">Panding Members</h2>
+            <hr/>
             <div class="row ">
                     @if (count($pandingUser) == 0)
                         <p class="text-center">No request is available</p>
@@ -17,8 +18,8 @@
                                 <h4 class="card-title">{{ $user->name }}</h4>
                                 <p class="card-text">{{ $user->mobile }}</p>
                                 <div class="d-flex justify-content-around align-items-center w-100">
-                                    <a href="#" 
-                                        id="approve" 
+                                    <a href="#"
+                                        id="approve"
                                         class="btn btn-success"
                                         data-id="{{ $user->id }}"
                                         >Approve</a>
@@ -31,7 +32,7 @@
             </div>
         </div>
 
-        
+
     </div>
 @endsection
 
@@ -41,8 +42,7 @@
             $(document).on('click', '#approve', function(e){
                 e.preventDefault();
                 let id = $(this).data('id');
-                console.log(id);
-                
+
                 $.ajax({
                     url:"{{ route('admin.member.pendingMemberApproved') }}",
                     method: 'post',
@@ -51,6 +51,7 @@
                         if(res.state == 'success'){
                             $('.cardList').load(location.href+' .cardList');
                             // console.log('ok');
+                            $('.pendingNumber').load(location.href+' .pendingNumber');
                         }
                     },
                     error:function(res){
