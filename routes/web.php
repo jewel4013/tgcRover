@@ -33,6 +33,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/admin/dashboard', [AdminControl::class, 'index'])->name('admin.dashboard');
     Route::get('/admin/members', [userControl::class, 'members'])->name('admin.members');
     Route::get('/admin/members/panding', [userControl::class, 'pendingMembers'])->name('admin.member.pendingMembers');
+    Route::post('/admin/members/panding/approved', [userControl::class, 'pendingMemberApproved'])->name('admin.member.pendingMemberApproved');
 });
 
 Route::get('/gallery', function(){

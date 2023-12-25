@@ -13,7 +13,17 @@ class userControl extends Controller
 
     public function pendingMembers(){
         return view('profile.admin.pendingMember', [
+            'pandingUserCount' => count(User::where('status', 0)->get()),
             'pandingUser' => User::where('status', 0)->latest()->get(),
+        ]);
+    }
+    public function pendingMemberApproved(Request $request){
+        $user = User::where('id', $request->id);
+        $user->update([
+            'status' => 1,
+        ]);
+        return response()->json([
+            'state' => 'success',
         ]);
     }
     

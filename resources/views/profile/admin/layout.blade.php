@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ Auth::user()->name }} | Dashboard | TGC Rovers</title>
 
   <!-- Google Font: Source Sans Pro -->
@@ -244,7 +245,11 @@
                 <a href="{{ url('/admin/members/panding') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Member Request</p>
-                  <span class="badge badge-info right">6</span>
+                  @if ($pandingUserCount == 0)
+
+                  @else
+                    <span class="badge badge-info right">{{ $pandingUserCount }}</span>
+                  @endif
                 </a>
               </li>
             </ul>
@@ -902,6 +907,13 @@
 <script src="https://kit.fontawesome.com/f820eab44a.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/admin_js/demo.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+</script>
 @yield('script')
 
 </body>

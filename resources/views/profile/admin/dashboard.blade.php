@@ -30,7 +30,7 @@
                             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
                             <div class="info-box-content">
                                 <span class="info-box-text">Member Reequest</span>
-                                <span class="info-box-number">{{ $pandingUser == 0 ? 'No new request' : $pandingUser }}</span>
+                                <span class="info-box-number">{{ $pandingUserCount == 0 ? 'No new request' : $pandingUserCount }}</span>
                             </div>
                         </div>
                     </a>
