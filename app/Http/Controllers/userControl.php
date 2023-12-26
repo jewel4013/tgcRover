@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\UserApprovedMail;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 
 class userControl extends Controller
 {
@@ -11,22 +14,60 @@ class userControl extends Controller
      * Display a listing of the resource.
      */
 
+    public function members(){
+        return view('profile.admin.members',[
+            'alluser' => User::where('status', 1)->latest()->get(),
+            'pandingUserCount' => count(User::where('status', 0)->get()),
+            'susUserCount' => count(User::where('status', 2)->get()),
+        ]);
+    }
     public function pendingMembers(){
         return view('profile.admin.pendingMember', [
-            'pandingUserCount' => count(User::where('status', 0)->get()),
             'pandingUser' => User::where('status', 0)->latest()->get(),
+            'pandingUserCount' => count(User::where('status', 0)->get()),
+            'susUserCount' => count(User::where('status', 2)->get()),
         ]);
     }
     public function pendingMemberApproved(Request $request){
         $user = User::where('id', $request->id);
         $user->update([
             'status' => 1,
-        ]);
-        return response()->json([
+        ]);      
+
+        $mailData = [
+            'title' => 'Approval confirmation.',
+            'body' => 'Lorem Lunch on Day 1 and this has been a good, balanced session of Test cricket. An overcast morning and plenty of wobbly movement for the bowlers. Rabada hit the right lengths and surprised Rohit with a short ball. Then, debutant Nandre Burger skittled out Jaiswal and Gill by getting some lovely away shape.'
+        ];
+        Mail::to($request->email)->send(new UserApprovedMail($mailData));
+
+        return  response()->json([
             'state' => 'success',
         ]);
     }
-    
+
+
+    public function pendingMemberDelete(Request $request){
+        $user = User::find($request->id);
+        $image_path = 'img/profilePic/'.$user->avatar; 
+         if(File::exists($image_path)) {
+            File::delete($image_path);
+        }
+
+        $user->bios()->delete();
+        $user->delete();
+
+        return response()->json([
+            'state' => 'delete',
+        ]);
+    }
+
+
+    public function susMember(){
+        return view('profile.admin.susMember', [
+            'susUserCount' => count(User::where('status', 2)->get()),
+            'susMemeber' => User::where('status', 2)->latest()->get(),
+        ]);
+    }
     public function index()
     {
         //

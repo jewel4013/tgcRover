@@ -10,6 +10,7 @@ class AdminControl extends Controller
     public function index(Request $request){
         return view('profile.admin.dashboard', [
             'pandingUserCount' => count(User::where('status', 0)->get()),
+            'susUserCount' => count(User::where('status', 2)->get()),
         ]);
     }
 }

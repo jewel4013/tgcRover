@@ -13,6 +13,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('css/admin_css/adminlte.min.css') }}">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -207,7 +208,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a href="{{ url('admin/members') }}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
@@ -216,23 +217,11 @@
 
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview">              
               <li class="nav-item">
-                <a href="{{ url('admin/members') }}" class="nav-link">
+                <a href="{{ url('/admin/members') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Rover Scout Leader</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Senior Rover Mate</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Rover</p>
+                  <p>All members</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -244,11 +233,22 @@
               <li class="nav-item pendingNumber">
                 <a href="{{ url('/admin/members/panding') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Member Request</p>
+                  <p>Member Request</p>                  
                   @if ($pandingUserCount == 0)
 
                   @else
-                    <span class="badge badge-info right">{{ $pandingUserCount }}</span>
+                    <span class="badge badge-info right ">{{ $pandingUserCount }}</span>                  
+                  @endif
+                </a>
+              </li>
+              <li class="nav-item susNumber">
+                <a href="{{ url('/admin/members/panding') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Suspended Rover</p>
+                  @if ($susUserCount == 0)
+
+                  @else
+                    <span class="badge badge-info right">{{ $susUserCount }}</span>
                   @endif
                 </a>
               </li>
@@ -907,6 +907,7 @@
 <script src="https://kit.fontawesome.com/f820eab44a.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/admin_js/demo.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 <script>
   $.ajaxSetup({
       headers: {
@@ -915,6 +916,7 @@
   });
 
 </script>
+
 @yield('script')
 
 </body>
