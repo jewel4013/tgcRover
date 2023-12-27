@@ -32,19 +32,20 @@ class userControl extends Controller
         $user = User::where('id', $request->id);
         $user->update([
             'status' => 1,
-        ]);      
-
-        $mailData = [
-            'title' => 'Approval confirmation.',
-            'body' => 'Lorem Lunch on Day 1 and this has been a good, balanced session of Test cricket. An overcast morning and plenty of wobbly movement for the bowlers. Rabada hit the right lengths and surprised Rohit with a short ball. Then, debutant Nandre Burger skittled out Jaiswal and Gill by getting some lovely away shape.'
-        ];
-        Mail::to($request->email)->send(new UserApprovedMail($mailData));
+        ]); 
 
         return  response()->json([
             'state' => 'success',
         ]);
     }
 
+    public function pendingMemberApprovedMail(Request $request){
+        $mailData = [
+            'title' => 'Approval confirmation.',
+            'body' => 'Lorem Lunch on Day 1 and this has been a good, balanced session of Test cricket. An overcast morning and plenty of wobbly movement for the bowlers. Rabada hit the right lengths and surprised Rohit with a short ball. Then, debutant Nandre Burger skittled out Jaiswal and Gill by getting some lovely away shape.'
+        ];
+        return Mail::to($request->email)->send(new UserApprovedMail($mailData));
+    }
 
     public function pendingMemberDelete(Request $request){
         $user = User::find($request->id);

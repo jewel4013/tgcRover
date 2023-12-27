@@ -51,7 +51,7 @@
             // approve code
             $(document).on('click', '#approve', function(e){
                 e.preventDefault();
-                $('#homeCard').hide();
+                
                 let id = $(this).data('id');
                 let name = $(this).data('name');
                 let email = $(this).data('email');
@@ -72,6 +72,13 @@
                                 "timeOut": "2000",
                             }
                             toastr.success(name+' approved as a Rover.');
+                            if($('.cardList').load(location.href+' .cardList')){
+                                $.ajax({
+                                    url:"{{ route('admin.member.pendingMemberApprovedMail') }}",
+                                    method: 'post',
+                                    data: {id:id,name:name,email:email},
+                                });                                
+                            }
                         }
                     },
                     error:function(res){
