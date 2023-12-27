@@ -32,7 +32,7 @@ class userControl extends Controller
         $user = User::where('id', $request->id);
         $user->update([
             'status' => 1,
-        ]); 
+        ]);
 
         return  response()->json([
             'state' => 'success',
@@ -49,7 +49,7 @@ class userControl extends Controller
 
     public function pendingMemberDelete(Request $request){
         $user = User::find($request->id);
-        $image_path = 'img/profilePic/'.$user->avatar; 
+        $image_path = 'img/profilePic/'.$user->avatar;
          if(File::exists($image_path)) {
             File::delete($image_path);
         }
