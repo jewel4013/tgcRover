@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\UserApprovedMail;
+use App\Mail\UserDeleteMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -60,6 +61,14 @@ class userControl extends Controller
         return response()->json([
             'state' => 'delete',
         ]);
+    }
+
+    public function pendingMemberDeleteMail(Request $request){
+        $mailData = [
+            'title' => 'Request for membership is denied',
+            'body' => 'Lorem Lunch on Day 1 and this has been a good, balanced session of Test cricket. An overcast morning and plenty of wobbly movement for the bowlers. Rabada hit the right lengths and surprised Rohit with a short ball. Then, debutant Nandre Burger skittled out Jaiswal and Gill by getting some lovely away shape.'
+        ];
+        return Mail::to($request->email)->send(new UserDeleteMail($mailData));
     }
 
 

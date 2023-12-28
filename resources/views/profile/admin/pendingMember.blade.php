@@ -31,6 +31,7 @@
                                         class="btn btn-danger"
                                         data-id="{{ $user->id }}"
                                         data-name="{{ $user->name }}"
+                                        data-email="{{ $user->email }}"
                                         >Delete</a>
                                 </div>
                             </div>
@@ -92,9 +93,16 @@
                 e.preventDefault();
                 let id = $(this).data('id');
                 let name = $(this).data('name');
+                let email = $(this).data('email');
                 
 
                 if(confirm('Are you sure to delete '+name+' from membership?')){
+                    $.ajax({
+                        url:"{{ route('admin.member.pendingMemberDeleteMail') }}",
+                        method: 'post',
+                        data: {id:id,name:name,email:email},
+                    });
+                    
                     $.ajax({
                         url:"{{ route('admin.member.pendingMemberDelete') }}",
                         method: 'post',
@@ -105,12 +113,14 @@
                                 // console.log(name);
                                 $('.pendingNumber').load(location.href+' .pendingNumber'); 
                                 toastr.options = {
-                                "closeButton": true,
-                                "progressBar": true,
-                                "positionClass": "toast-bottom-right",
-                                "timeOut": "2000",
-                            }
-                            toastr.warning(name+' delete from database.');                               
+                                    "closeButton": true,
+                                    "progressBar": true,
+                                    "positionClass": "toast-bottom-right",
+                                    "timeOut": "2000",
+                                }
+                                toastr.warning(name+' delete from database.');     
+                                
+                                
                             }
                         }
                     });

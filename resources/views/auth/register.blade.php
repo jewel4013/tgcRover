@@ -38,7 +38,7 @@
                             <!-- Email Address -->
                             <div class="mt-2">
                                 <x-input-label for="email" :value="__('Email')" />
-                                <x-text-input id="email" class="" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                                <x-text-input id="email" class="" type="email" name="email" :value="old('email')" required autocomplete="email" />
                                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
                             </div>
                             <div class="row m-0 p-0">
@@ -72,7 +72,7 @@
                                     <x-text-input id="password" class="mt-1"
                                                     type="password"
                                                     name="password"
-                                                    required autocomplete="new-password" />
+                                                    required autocomplete="password" />
                                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                 </div>
 
@@ -81,7 +81,7 @@
                                     <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
                                     <x-text-input id="password_confirmation" class="mt-1"
                                                     type="password"
-                                                    name="password_confirmation" required autocomplete="new-password" />
+                                                    name="password_confirmation" required autocomplete="password_confirmation" />
                                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                 </div>
 
