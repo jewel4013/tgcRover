@@ -72,10 +72,10 @@ class userControl extends Controller
     }
 
 
-    public function susMember(){
-        return view('profile.admin.susMember', [
-            'susUserCount' => count(User::where('status', 2)->get()),
-            'susMemeber' => User::where('status', 2)->latest()->get(),
+    public function suspendedMember(){
+        return view('profile.admin.suspendedMembers', [
+            'pandingUserCount' => count(User::where('status', 0)->get()),
+            'suspendedMemebers' => User::where('status', 2)->latest()->get(),
         ]);
     }
     public function index()

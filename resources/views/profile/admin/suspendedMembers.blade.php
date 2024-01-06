@@ -2,7 +2,7 @@
 
 @section('adminMainContent')
     <div class="p-3">
-        <h2 class="text-center">All Members</h2>
+        <h2 class="text-center">Suspended Members</h2>
         <hr/>
         <table class="table table-striped">
             <tr>
@@ -13,7 +13,7 @@
                 <th>Batch</th>
                 <th>Actions</th>
             </tr>
-            @foreach ($alluser as $key=>$user)
+            @foreach ($suspendedMemebers as $key=>$user)
                 <tr class="p-0 m-0">
                     <td class="p-1">{{ $key+1 }}</td>
                     <td class="p-1">
@@ -37,7 +37,6 @@
     </div>
 
 @endsection
-
 
 
 {{-- {{ dd($pandingUser)->toarray() }} --}}

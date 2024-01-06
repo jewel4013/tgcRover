@@ -217,7 +217,7 @@
 
               </p>
             </a>
-            <ul class="nav nav-treeview">              
+            <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ url('/admin/members') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -233,23 +233,18 @@
               <li class="nav-item pendingNumber">
                 <a href="{{ url('/admin/members/panding') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Member Request</p>                  
+                  <p>Member Request</p>
                   @if ($pandingUserCount == 0)
 
                   @else
-                    <span class="badge badge-info right ">{{ $pandingUserCount }}</span>                  
+                    <span class="badge badge-info right ">{{ $pandingUserCount }}</span>
                   @endif
                 </a>
               </li>
               <li class="nav-item susNumber">
-                <a href="{{ url('/admin/members/panding') }}" class="nav-link">
+                <a href="{{ route('admin.member.suspendedMember') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Suspended Rover</p>
-                  @if ($susUserCount == 0)
-
-                  @else
-                    <span class="badge badge-info right">{{ $susUserCount }}</span>
-                  @endif
                 </a>
               </li>
             </ul>

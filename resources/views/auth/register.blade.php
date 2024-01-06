@@ -32,28 +32,28 @@
                             <div class="">
                                 <x-input-label for="name" :value="__('Full Name')" />
                                 <x-text-input id="name" class="" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                <x-input-error :messages="$errors->get('name')" class="m-0" />
                             </div>
 
                             <!-- Email Address -->
                             <div class="mt-2">
                                 <x-input-label for="email" :value="__('Email')" />
                                 <x-text-input id="email" class="" type="email" name="email" :value="old('email')" required autocomplete="email" />
-                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                <x-input-error :messages="$errors->get('email')" class="m-0" />
                             </div>
                             <div class="row m-0 p-0">
                                 <!-- User Name -->
                                 <div class="col-lg-6 mt-2">
                                     <x-input-label for="user_name" :value="__('User Name')" />
                                     <x-text-input id="user_name" class="mt-1" type="text" name="user_name" :value="old('user_name')" required autocomplete="user_name" />
-                                    <x-input-error :messages="$errors->get('user_name')" class="mt-2" />
+                                    <x-input-error :messages="$errors->get('user_name')" class="m-0" />
                                 </div>
 
                                 <!-- Mobile -->
                                 <div class="col-lg-6 mt-2">
                                     <x-input-label for="mobile" :value="__('Mobile Number')" />
                                     <x-text-input id="mobile" class="mt-1" type="text" name="mobile" :value="old('mobile')" required autocomplete="mobile" />
-                                    <x-input-error :messages="$errors->get('mobile')" class="mt-2" />
+                                    <x-input-error :messages="$errors->get('mobile')" class="m-0" />
                                 </div>
                             </div>
 
@@ -61,7 +61,7 @@
                             <div class="mt-2">
                                 <x-input-label for="avatar" :value="__('Avatar')" />
                                 <x-text-input id="avatar" class="mt-1" type="file" name="avatar" :value="old('avatar')" files="true" required/>
-                                <x-input-error :messages="$errors->get('avatar')" class="mt-2" />
+                                <x-input-error :messages="$errors->get('avatar')" class="m-0" />
                             </div>
 
 
@@ -73,7 +73,7 @@
                                                     type="password"
                                                     name="password"
                                                     required autocomplete="password" />
-                                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                    <x-input-error :messages="$errors->get('password')" class="m-0" />
                                 </div>
 
                                 <!-- Confirm Password -->
@@ -82,7 +82,7 @@
                                     <x-text-input id="password_confirmation" class="mt-1"
                                                     type="password"
                                                     name="password_confirmation" required autocomplete="password_confirmation" />
-                                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                                    <x-input-error :messages="$errors->get('password_confirmation')" class="m-0" />
                                 </div>
 
                             </div>

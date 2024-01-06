@@ -37,7 +37,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::post('/admin/members/panding/approved/mail', [userControl::class, 'pendingMemberApprovedMail'])->name('admin.member.pendingMemberApprovedMail');
     Route::post('/admin/members/panding/delete', [userControl::class, 'pendingMemberDelete'])->name('admin.member.pendingMemberDelete');
     Route::post('/admin/members/panding/delete/mail', [userControl::class, 'pendingMemberDeleteMail'])->name('admin.member.pendingMemberDeleteMail');
-    Route::get('/admin/members/suspended', [userControl::class, 'susMember'])->name('admin.member.susMember');
+    Route::get('/admin/members/suspended', [userControl::class, 'suspendedMember'])->name('admin.member.suspendedMember');
 
 });
 
