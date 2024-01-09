@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\suspendedMemberMail;
+use App\Mail\unSuspendedMemberMail;
 use App\Mail\UserApprovedMail;
 use App\Mail\UserDeleteMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
+
+use function Laravel\Prompts\alert;
 
 class userControl extends Controller
 {
@@ -17,7 +21,7 @@ class userControl extends Controller
 
     public function members(){
         return view('profile.admin.members',[
-            'alluser' => User::where('status', 1)->latest()->get(),
+            'alluser' => User::where('status', '!=', 0)->latest()->get(),
             'pandingUserCount' => count(User::where('status', 0)->get()),
             'susUserCount' => count(User::where('status', 2)->get()),
         ]);
@@ -78,6 +82,39 @@ class userControl extends Controller
             'suspendedMemebers' => User::where('status', 2)->latest()->get(),
         ]);
     }
+
+    public function suspendedMemberStore(Request $request){
+        $user = User::find($request->id);
+        $user->update([
+            'status' => 2,
+        ]);
+        return  response()->json([
+            'state' => 'success',
+        ]);
+    }
+    public function suspendedMemberMail(Request $request){
+        $mailData = [
+            'title' => 'This mail for suspention of your account.',
+            'body' => 'This is the body part of your suspention account mail.'
+        ];
+        return Mail::to($request->email)->send(new suspendedMemberMail($mailData));
+    }
+
+    public function unsuspendedMemberStore(Request $request){
+        $user = User::find($request->id);
+        $user->update([
+            'status' => 1,
+        ]);
+        return  response()->json([
+            'state' => 'success',
+        ]);
+    }
+
+    public function unsuspendedMemberMail(Request $request){
+        $mailData = [        ];
+        return Mail::to($request->email)->send(new unSuspendedMemberMail($mailData));
+    }
+
     public function index()
     {
         //
