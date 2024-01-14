@@ -42,6 +42,7 @@
                 </tr>
             @endforeach
         </table>
+        {{-- <p>{{ Request::route()->getName(); }}</p> --}}
         @if ( count($alluser) == 0)
             <p>Nothing found</p>
         @endif

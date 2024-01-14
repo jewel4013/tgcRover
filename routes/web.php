@@ -30,18 +30,24 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/profile/bios', [ProfileController::class, 'bios'])->name('profile.bios');
     Route::patch('/profile/bios', [ProfileController::class, 'boisEdit'])->name('profile.boisEdit');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/admin/dashboard', [AdminControl::class, 'index'])->name('admin.dashboard');
-    Route::get('/admin/members', [userControl::class, 'members'])->name('admin.members');
-    Route::get('/admin/members/panding', [userControl::class, 'pendingMembers'])->name('admin.member.pendingMembers');
-    Route::post('/admin/members/panding/approved', [userControl::class, 'pendingMemberApproved'])->name('admin.member.pendingMemberApproved');
-    Route::post('/admin/members/panding/approved/mail', [userControl::class, 'pendingMemberApprovedMail'])->name('admin.member.pendingMemberApprovedMail');
-    Route::post('/admin/members/panding/delete', [userControl::class, 'pendingMemberDelete'])->name('admin.member.pendingMemberDelete');
-    Route::post('/admin/members/panding/delete/mail', [userControl::class, 'pendingMemberDeleteMail'])->name('admin.member.pendingMemberDeleteMail');
-    Route::get('/admin/members/suspended', [userControl::class, 'suspendedMember'])->name('admin.member.suspendedMember');
-    Route::post('/admin/members/suspended', [userControl::class, 'suspendedMemberStore'])->name('admin.member.suspendingdMember');
-    Route::post('/admin/members/unsuspended', [userControl::class, 'unsuspendedMemberStore'])->name('admin.member.unsuspendingdMember');
-    Route::post('/admin/members/suspended/mail', [userControl::class, 'suspendedMemberMail'])->name('admin.member.suspendedMemberMail');
-    Route::post('/admin/members/unsuspended/mail', [userControl::class, 'unsuspendedMemberMail'])->name('admin.member.unsuspendedMemberMail');
+    Route::prefix('admin')->group(function(){
+        Route::get('/dashboard', [AdminControl::class, 'index'])->name('admin.dashboard');
+        Route::prefix('members')->group(function(){
+            Route::get('/all-members', [userControl::class, 'members'])->name('admin.allmembers');
+            Route::get('/panding', [userControl::class, 'pendingMembers'])->name('admin.member.pendingMembers');
+            Route::post('/panding/approved', [userControl::class, 'pendingMemberApproved'])->name('admin.member.pendingMemberApproved');
+            Route::post('/panding/approved/mail', [userControl::class, 'pendingMemberApprovedMail'])->name('admin.member.pendingMemberApprovedMail');
+            Route::post('/panding/delete', [userControl::class, 'pendingMemberDelete'])->name('admin.member.pendingMemberDelete');
+            Route::post('/panding/delete/mail', [userControl::class, 'pendingMemberDeleteMail'])->name('admin.member.pendingMemberDeleteMail');
+            Route::get('/suspended', [userControl::class, 'suspendedMember'])->name('admin.member.suspendedMember');
+            Route::post('/suspended', [userControl::class, 'suspendedMemberStore'])->name('admin.member.suspendingdMember');
+            Route::post('/unsuspended', [userControl::class, 'unsuspendedMemberStore'])->name('admin.member.unsuspendingdMember');
+            Route::post('/suspended/mail', [userControl::class, 'suspendedMemberMail'])->name('admin.member.suspendedMemberMail');
+            Route::post('/unsuspended/mail', [userControl::class, 'unsuspendedMemberMail'])->name('admin.member.unsuspendedMemberMail');
+        })->name('members');
+        
+    });
+        
 
 });
 
