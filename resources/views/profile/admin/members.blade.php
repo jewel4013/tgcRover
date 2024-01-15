@@ -42,7 +42,7 @@
                 </tr>
             @endforeach
         </table>
-        {{-- <p>{{ Request::route()->getName(); }}</p> --}}
+        {{-- <p>{{ Request::is('admin/*') }}</p> --}}
         @if ( count($alluser) == 0)
             <p>Nothing found</p>
         @endif
@@ -54,6 +54,9 @@
 @section('script')
     <script>
         $(document).ready(function(){
+            $(document).on('click', '#allMembers', function(e){
+                e.preventDefault();
+            });
 
             // Suspend code
             $(document).on('click', '#suspend', function(e){

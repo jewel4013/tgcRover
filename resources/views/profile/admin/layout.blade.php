@@ -200,7 +200,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item "> <!-- menu-open-->
-            <a href="{{ url('/admin/dashboard') }}" class="nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}">
+            <a href="{{ url('/admin/dashboard') }}" class="nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}" id="dashboard">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>                
                 Dashboard
@@ -208,30 +208,29 @@
               </p>
             </a>
           </li>
-          <li class="nav-item {{ Request::route()->getName() == 'members' ?  'active menu-open' : ''}}">
-            <a href="" class="nav-link ">
+          <li class="nav-item ">
+            <a href="" class="nav-link {{ Request::is('admin/members/*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Members
                 <i class="fas fa-angle-left right"></i>
-
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('/admin/members/all-members') }}" class="nav-link {{ Request::is('admin/members/all-members') ? 'active' : '' }}">
+                <a href="{{ url('/admin/members/all-members') }}" class="nav-link {{ Request::is('admin/members/all-members') ? 'active' : '' }}" id="allMembers">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All members</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Former Rover</p>
                 </a>
-              </li>
+              </li> --}}
               <li class="nav-item pendingNumber">
-                <a href="{{ url('/admin/members/panding') }}" class="nav-link {{ Request::is('admin/members/panding') ? 'active' : '' }}">
+                <a href="{{ url('/admin/members/panding') }}" class="nav-link {{ Request::is('admin/members/panding') ? 'active' : '' }}" id="memberReq">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Member Request</p>
                   @if ($pandingUserCount == 0)
@@ -242,7 +241,7 @@
                 </a>
               </li>
               <li class="nav-item susNumber">
-                <a href="{{ route('admin.member.suspendedMember') }}" class="nav-link {{ Request::is('admin/members/suspended') ? 'active' : '' }}">
+                <a href="{{ route('admin.member.suspendedMember') }}" class="nav-link {{ Request::is('admin/members/suspended') ? 'active' : '' }}" id="memberSus">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Suspended Rover</p>
                 </a>

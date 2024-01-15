@@ -38,5 +38,14 @@
 
 @endsection
 
-
 {{-- {{ dd($pandingUser)->toarray() }} --}}
+
+@section('script')
+    <script>
+        $(document).ready(function(){
+            $(document).on('click', '#memberSus', function(e){
+                e.preventDefault();
+            });
+        });
+    </script>    
+@endsection

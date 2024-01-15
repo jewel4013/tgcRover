@@ -47,7 +47,10 @@
 
 @section('script')
     <script>
-        $(document).ready(function(){
+        $(document).ready(function(){            
+            $(document).on('click', '#memberReq', function(e){
+                e.preventDefault();
+            });
 
             // approve code
             $(document).on('click', '#approve', function(e){

@@ -26,10 +26,11 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth', 'verified')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/profile/bios', [ProfileController::class, 'bios'])->name('profile.bios');
     Route::patch('/profile/bios', [ProfileController::class, 'boisEdit'])->name('profile.boisEdit');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile/contribution', [ProfileController::class, 'contribution'])->name('profile.contribution');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::prefix('admin')->group(function(){
         Route::get('/dashboard', [AdminControl::class, 'index'])->name('admin.dashboard');
         Route::prefix('members')->group(function(){

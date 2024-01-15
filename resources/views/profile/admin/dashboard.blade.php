@@ -789,3 +789,15 @@
     </section>
     <!-- /.content -->
 @endsection
+
+@section('script')
+
+    <script>
+        $(document).ready(function(e){
+            $(document).on('click', '#dashboard', function(e){
+                e.preventDefault();
+            });
+        })
+    </script>
+    
+@endsection
