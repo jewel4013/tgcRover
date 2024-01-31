@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('avatar');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('user_type')->default('user');
+            $table->string('user_type')->default('Rover');
             $table->string('status')->default(false);            
             $table->rememberToken();
             $table->timestamps();

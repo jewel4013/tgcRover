@@ -11,7 +11,6 @@
                         <p class="text-center">No request is available</p>
                     @endif
                 @foreach ($pandingUser as $user)
-
                     <div class="col-lg-3 col-md-4 col-sm-12 p-2 " id="homeCard">
                         <div class="card d-flex justify-content-center align-items-center p-0 ">
                             <img class="card-img-top rounded-circle mt-1" style="width: 180px;height:180px; object-fit: cover; " src="{{ asset('/img/profilePic/'.$user->avatar) }}" alt="User Image">

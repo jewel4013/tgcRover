@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminControl;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\userControl;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,10 +20,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/members', function(){
+    return view('members', [
+        'alluser' => User::where('status', 1)->latest()->get(),
+    ]);
+})->name('members');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth', 'verified')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
