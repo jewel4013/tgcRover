@@ -65,16 +65,14 @@
                             <nav class="navigation">
                                 <ul class="nav menu">
                                     <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
-                                    <li class="{{ Request::is('members') ? 'active' : '' }}"><a href="" onclick="event.preventDefault()">Members <i class="icofont-rounded-down"></i></a>
-                                        <ul class="dropdown">
+                                    <li class="{{ Request::is('members') ? 'active' : '' }}"><a href="{{ route('members') }}" id="menumembers">Members</a>
+                                        {{-- <ul class="dropdown">
                                             <li><a href="{{ route('members') }}">All memmber</a></li>
                                             <li><a href="index.html">Rover Scout Leader</a></li>
-                                            <li><a href="index.html">Senior Rover Mate</a></li>
-                                            {{-- <li><a href="index.html">Rover Mate</a></li> --}}
+                                            <li><a href="index.html">Senior Rover Mate</a></li>                                            
                                             <li><a href="index.html">Rover</a></li>
-                                            {{-- <li><a href="index.html">Rover Squire</a></li> --}}
                                             <li><a href="index.html">Former Rover</a></li>
-                                        </ul>
+                                        </ul> --}}
                                     </li>
                                     <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="" onclick="event.preventDefault()">Events <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">

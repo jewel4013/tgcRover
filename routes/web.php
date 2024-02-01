@@ -20,11 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/members', function(){
-    return view('members', [
-        'alluser' => User::where('status', 1)->latest()->get(),
-    ]);
-})->name('members');
+Route::get('/members', [userControl::class, 'memberInPublic'])->name('members');
+Route::get('/members-search', [userControl::class, 'memberSearch'])->name('members.serach');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

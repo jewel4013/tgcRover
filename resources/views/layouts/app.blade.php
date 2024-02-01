@@ -197,15 +197,15 @@
             @endif
 
             @if (Session::has('biosUpdate'))
-            <script>
-                 toastr.options = {
-                        "closeButton": true,
-                        "progressBar": true,
-                        "timeOut": "10000",
-                    }
-                toastr.success("{{ Session::get('biosUpdate') }}");
-            </script>
-        @endif
+                <script>
+                    toastr.options = {
+                            "closeButton": true,
+                            "progressBar": true,
+                            "timeOut": "10000",
+                        }
+                    toastr.success("{{ Session::get('biosUpdate') }}");
+                </script>
+            @endif
 
 
         @show

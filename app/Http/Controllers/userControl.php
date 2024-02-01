@@ -26,6 +26,26 @@ class userControl extends Controller
             'susUserCount' => count(User::where('status', 2)->get()),
         ]);
     }
+
+    public function memberInPublic(){
+        return view('members', [
+            'alluser' => User::where('status', 1)->latest()->get(),
+        ])->render();
+    }
+    public function memberSearch(Request $request){
+        $alluser = User::where('name', 'like', '%'.$request->filter_search.'%')
+        ->orWhere('user_type', 'like', '%'.$request->filter_search.'%')->latest()->get();
+        
+        if($alluser->count() >= 1){
+            return view('members', ['alluser'])->render();
+        }else{
+            return response()->json([
+                'status' => 'Nothing_found',
+            ]);
+        }
+
+    }
+
     public function pendingMembers(){
         return view('profile.admin.pendingMember', [
             'pandingUser' => User::where('status', 0)->latest()->get(),
@@ -114,6 +134,8 @@ class userControl extends Controller
         $mailData = [        ];
         return Mail::to($request->email)->send(new unSuspendedMemberMail($mailData));
     }
+
+
 
     public function index()
     {
